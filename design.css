@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(251, 225, 225);
+}
+h1 {
+    color: darkred;
+}
+.topNavigationBar{
+    background-color: rgb(216, 105, 105);
+    overflow: hidden;
+}
+.topNavigationBar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topNavigationBar a:hover{
+    background-color: rgb(192, 33, 33);
+    color: black;
+}
+
+.selectUserType h3{
+    color: black;
+    margin-top: 10%;
+    margin-left: 40%;
+}
+
+.selectUserType table{
+    margin-left:50%; 
+    margin-right:50%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.selectUserType table td{
+    border: 3px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+    background-color: rgb(231, 86, 42);
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <h1>Blood Bank Management System</h1>
+    <h2>Your valuable donation saves 3 lives</h2>
+    <div class="topNavigationBar">
+        <a class="active" href="index.html">HOME</a>
+        <a href="seek.html">LOOKING FOR BLOOD</a>
+        <a href="donor.html">WANT TO DONATE</a>
+        <a href="aboutus.html">ABOUT US</a>
+    </div>
+    <div class="bloodSearch">
+        <form action="donorLogin.php">
+            <table>
+                <tr>
+                    <td><label for="district">District:</label></td>
+                    <td>
+                        <select id="district" name="district">
+                            <option value="ampara">Ampara</option>
+                            <option value="anuradhapura">Anuradhapura</option>
+                            <option value="badulla">Badulla</option>
+                            <option value="batticaloa">Batticaloa</option>
+                            <option value="colombo">Colombo</option>
+                            <option value="galle">Galle</option>
+                            <option value="gampaha">Gampaha</option>
+                            <option value="hambanthota">Hambanthota</option>
+                            <option value="jaffna">Jaffna</option>
+                            <option value="kalutara">Kalutara</option>
+                            <option value="kandy">Kandy</option>
+                            <option value="kegalle">Kegalle</option>
+                            <option value="kilinochchi">Kilinochchi</option>
+                            <option value="kurunegala">Kurunegala</option>
+                            <option value="mannar">Mannar</option>
+                            <option value="matale">Matale</option>
+                            <option value="matara">Matara</option>
+                            <option value="moneragala">Moneragala</option>
+                            <option value="mullaitive">Mullaitivu</option>
+                            <option value="nuwaraeliya">Nuwara Eliya</option>
+                            <option value="polonnaruwa">Polonnaruwa</option>
+                            <option value="puttalam">Puttalam</option>
+                            <option value="ratnapura">Ratnapura</option>
+                            <option value="trinvimalee">Trincomalee</option>
+                            <option value="vavuniya">Vavuniya</option>
+
+                        </select>
+                    </td>
+                    
+                </tr>
+                <tr>
+                <td>Blood group of the patient:</td>
+                <td><input type="input" id="patientbloodtype" name="patientbloodtype"><br></td>
+                </tr>
+                <tr>
+                    <td>Component type:</td>
+                    <td>
+                        <select id="bloodcomponent" name="bloodcomponent">
+                            <option value="redblood">Red blood cells</option>
+                            <option value="plasma">Plasma</option>
+                        </select>
+                    </td>
+                    </tr>
+                <tr>
+                    <td></td>
+                    <td> <input type="submit" value="Search"></td>
+                </tr>
+            </table> 
+        </form>
+    </div>
+</body>
+</html>

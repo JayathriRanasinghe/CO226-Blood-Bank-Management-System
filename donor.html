@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <h1>Blood Bank Management System</h1>
+    <h2>Your valuable donation saves 3 lives</h2>
+    <div class="topNavigationBar">
+        <a class="active" href="index.html">HOME</a>
+        <a href="seek.html">LOOKING FOR BLOOD</a>
+        <a href="donor.html">WANT TO DONATE</a>
+        <a href="aboutus.html">ABOUT US</a>
+    </div>
+    <div class="donorLogin">
+        <h3>Login</h3>
+        <form action="donorLogin.php">
+            <table>
+                <tr>
+                <td>Username:</td>
+                <td><input type="text" id="donorUsername" name="donorUsername"><br></td>
+                </tr>
+                <tr>
+                <td>Password:</td>
+                <td><input type="password" id="donorPW" name="donorPW"><br></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <input type="submit" value="Login"></td>
+                </tr>
+            </table> 
+        </form>
+        <p>New user? <a href="donorRegister.html">Register</a></p>
+    </div>
+</body>
+</html>
