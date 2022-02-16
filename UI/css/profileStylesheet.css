@@ -1,3 +1,28 @@
+body{
+    background-color: rgb(251, 225, 225);
+}
+h1 {
+    color: darkred;
+}
+.topNavigationBar{
+    background-color: rgb(216, 105, 105);
+    overflow: hidden;
+}
+.topNavigationBar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    width: 218px;
+}
+.topNavigationBar a:hover{
+    background-color: rgb(192, 33, 33);
+    color: black;
+}
+
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
@@ -9,12 +34,12 @@
     
   }
   
-  .title {
+ .card .title {
     color: grey;
     font-size: 18px;
   }
   
-  button {
+ .card button {
     border: none;
     outline: 0;
     display: inline-block;
@@ -27,12 +52,126 @@
     font-size: 18px;
   }
   
-  a {
+ .card a {
     text-decoration: none;
     font-size: 22px;
     color: black;
   }
   
-  button:hover, a:hover {
+ .card button:hover, a:hover {
     opacity: 0.7;
   }
+
+  /* The side navigation menu */
+ .sidebar {
+    margin-top: 1%;
+    padding: 0;
+    width: 250px;
+    max-height: 490px;
+    background-color: #ddb2b2;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    font-size: larger;
+    
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    height: 20px;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #a10a0adc;
+    color: white;
+  }
+  .sidebar a.booking {
+      background-color: rgb(17, 121, 35);
+      color: white;
+      text-align: center;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: rgb(158, 69, 69);
+    color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  .sidebar div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  } 
+
+  .display{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 1094px;
+    max-height: 490px;
+    width: 100%;
+    height: 100%;
+    margin-top:1%;
+    margin-left: 34.5%;
+    background-color: #ddb2b2;
+    text-align: left;
+    position: fixed;
+    
+}
+
+
+.subTextDisplay{
+    margin-left: 10%;
+}
+
+.display2{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 1400px;
+    max-height: 490px;
+    width: 100%;
+    height: 100%;
+    margin-top:1%;
+    margin-left: 16%;
+    background-color: #ddb2b2;
+    text-align: left;
+    position: fixed;
+    
+}
+
+
+.display3{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 1400px;
+    max-height: 490px;
+    width: 100%;
+    height: 100%;
+    margin-top:1%;
+    margin-left: 16%;
+    background-color: #ddb2b2;
+    text-align: left;
+    position: fixed;
+    
+}
