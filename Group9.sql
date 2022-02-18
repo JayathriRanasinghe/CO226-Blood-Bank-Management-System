@@ -263,4 +263,4 @@ VALUES ("Sri Lanka Red Cross","0112691095","106, Dharmapala Mawatha,Colombo 07",
 ("Asia capital PLC","0115320000","No 102, Bauddhaloka Mawatha, Colombo ",1000,16);
 
 -- Test 123
-
+--asdfsafsadf
