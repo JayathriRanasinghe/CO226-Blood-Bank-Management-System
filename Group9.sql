@@ -262,3 +262,5 @@ VALUES ("Sri Lanka Red Cross","0112691095","106, Dharmapala Mawatha,Colombo 07",
 ("Muslim Aid","0112076160","22-2 Sirimal Mawatha, Dehiwala-Mount Lavinia",1001,23),
 ("Asia capital PLC","0115320000","No 102, Bauddhaloka Mawatha, Colombo ",1000,16);
 
+-- Test 123
+
