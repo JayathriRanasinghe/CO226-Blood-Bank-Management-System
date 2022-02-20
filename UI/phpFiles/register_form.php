@@ -2,7 +2,7 @@
     echo "in php";
     //require('database.php');
     // When form submitted, insert values into the database.
-    if (isset($_POST['submit'])) {
+    if (isset($_POST['save'])) {
         $firstname = $_POST['donorFirstname'];
         //$firstname = mysqli_real_escape_string($con, $firstname);
 
@@ -39,8 +39,8 @@
 
 
 
-        $query = "INSERT INTO `donor_account`(donor_fname,donor_lname,donor_nic,gender,birthday,address,district,blood_group,password,email)
-        VALUES ('$firstname','$lastname','$nic','$gender','$bday','$address','$district','$bloodgroup','$password',$email)";
+        $query = "INSERT INTO `donor_account`(donor_id,donor_fname,donor_lname,donor_nic,gender,birthday,address,district,blood_group,password,email)
+        VALUES (NULL,'$firstname','$lastname','$nic','$gender','$bday','$address','$district','$bloodgroup','$password',$email)";
         //$query    = "INSERT into `donor_account` (username, password, email, create_datetime)
           //           VALUES ('$username', '" . md5($password) . "', '$email', '$create_datetime')";
         $result   = mysqli_query($con, $query);
@@ -53,6 +53,9 @@
                   */
         } else{
             echo "unsuccessfull!";
+            echo $mysqli->error;
         }
+    }else{
+        echo "Noooo!!!";
     }
 ?>
