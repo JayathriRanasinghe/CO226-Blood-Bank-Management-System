@@ -39,11 +39,12 @@
 
 
 
-        $query = "INSERT INTO `donor_account`(donor_id,donor_fname,donor_lname,donor_nic,gender,birthday,address,district,blood_group,password,email)
+        $query = "INSERT INTO donor_account(donor_id,donor_fname,donor_lname,donor_nic,gender,birthday,donor_address,district,blood_group,donor_password,email)
         VALUES (NULL,'$firstname','$lastname','$nic','$gender','$bday','$address','$district','$bloodgroup','$password',$email)";
         //$query    = "INSERT into `donor_account` (username, password, email, create_datetime)
           //           VALUES ('$username', '" . md5($password) . "', '$email', '$create_datetime')";
-        $result   = mysqli_query($con, $query);
+        $result   = mysqli_query($con, $query) or die(mysqli_error($con));
+        //mysqli_query($db,"INSERT INTO stockdetails (`itemdescription`,`itemnumber`,`sellerid`,`purchasedate`,`otherinfo`,`numberofitems`,`isitdelivered`,`price`) VALUES ('$itemdescription','$itemnumber','$sellerid','$purchasedate','$otherinfo','$numberofitems','$numberofitemsused','$isitdelivered','$price')") or die(mysqli_error($db));
         if ($result) {
             echo "Successful!";
            /* echo "<div class='form'>
@@ -53,7 +54,7 @@
                   */
         } else{
             echo "unsuccessfull!";
-            echo $mysqli->error;
+            //echo $mysqli -> error;
         }
     }else{
         echo "Noooo!!!";
