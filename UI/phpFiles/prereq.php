@@ -3,20 +3,15 @@
     require('database.php');
     // When form submitted, insert values into the database.
     if (isset($_POST['save'])) {
-        $firstname = $_POST['donorFirstname'];
-        $lastname = $_POST['donorLastname'];
-        $nic = $_POST['nic'];
-        $gender = $_POST['gender'];
-        $bday = $_POST['donor_bday'];
-        $district = $_POST['district'];
-        $address = $_POST['addressDonor'];
-        $bloodgroup = $_POST['bloodgroup'];
-        $password = $_POST['donor_reg_password'];
-        $email    = $_POST['donoremail'];
+        
+        $weight = $_POST['weight'];
+        $age = $_POST['age'];
+        $last_donation_date = $_POST['last_donation_date'];
+        $med_conditions = $_POST['med_conditions'];
         
 
-        $query = "INSERT INTO donor_account(donor_id,donor_fname,donor_lname,donor_nic,gender,birthday,address,district,blood_group,password,email)
-        VALUES (NULL,'$firstname','$lastname','$nic','$gender','$bday','$address','$district','$bloodgroup','$password','$email')";
+        $query = "INSERT INTO donor_prerequisites(donor_id,age,weight,last_donated_date,medical_condition)
+        VALUES (NULL,'$age','$weight','$last_donated_date','$medical_condition')";
         
         $result   = mysqli_query($con, $query) or die(mysqli_error($con));
         
