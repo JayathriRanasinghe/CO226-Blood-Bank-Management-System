@@ -18,21 +18,27 @@
     </div>
     <div class="donorReg">
         <h3>Register</h3>
-        <form action="donorReg.php">
+        <form method="post" action="../phpFiles/register_form.php">
             <table>
                 <tr>
-                    <td>Full name:</td>
-                    <td><input type="text" id="donorUsername" name="donorUsername"><br></td>
+                    <td>First name:</td>
+                    <td><input type="text" id="donorFirstname" name="donorFirstname"><br></td>
+                    <td>Last name:</td>
+                    <td><input type="text" id="donorLastname" name="donorLastname"><br></td>
+                </tr>
+                <tr>
+                    <td>NIC:</td>
+                    <td><input type="text" id="nic" name="nic"><br></td>
                 </tr>
                 <tr>
                     <td>Gender:</td>
-                    <td><input type="radio" id="gender_male" name="gender_male" value="MALE"> <label for="male">Male</label><br>
-                        <input type="radio" id="gender_female" name="gender_female" value="FEMALE"> <label for="female">Female</label>
+                    <td><input type="radio" id="gender_male" name="gender" value="MALE"> <label for="male">Male</label><br>
+                        <input type="radio" id="gender_female" name="gender" value="FEMALE"> <label for="female">Female</label>
                     </td>
                 </tr>
                 <tr>
                     <td>Birthday:</td>
-                    <td><input type="date" id="donorPW" name="donorPW"><br></td>
+                    <td><input type="date" id="donor_bday" name="donor_bday"><br></td>
                 </tr>
                 <tr>
                     <td><label for="district">District:</label></td>
@@ -61,7 +67,7 @@
                             <option value="polonnaruwa">Polonnaruwa</option>
                             <option value="puttalam">Puttalam</option>
                             <option value="ratnapura">Ratnapura</option>
-                            <option value="trinvimalee">Trincomalee</option>
+                            <option value="trincomalee">Trincomalee</option>
                             <option value="vavuniya">Vavuniya</option>
 
                         </select>
@@ -73,8 +79,12 @@
                     <td><input type="text" id="addressDonor" name="addressDonor"></td>
                 </tr>
                 <tr>
-                    <td>Telephone:</td>
-                    <td><input type="text" id="telephone" name="telephone"></td>
+                    <td>Blood Group:</td>
+                    <td><input type="text" id="bloodgroup" name="bloodgroup"></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" id="donor_reg_password" name="donor_reg_password"></td>
                 </tr>
                 <tr>
                     <td>Email:</td>
@@ -85,7 +95,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td> <input type="submit" value="Register"></td>
+                    <td> <input type="submit" name= "save" value="Register"></td>
                 </tr>
                 
             </table> 
