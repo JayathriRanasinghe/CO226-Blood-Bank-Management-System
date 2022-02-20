@@ -20,5 +20,5 @@
                   <p class='link'>Click here to <a href='../html/donor.html'>Login</a> again.</p>
                   </div>";
         }
-    } else {
+    }
 ?>
