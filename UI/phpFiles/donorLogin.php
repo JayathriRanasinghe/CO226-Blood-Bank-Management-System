@@ -4,7 +4,7 @@
     // When form submitted, check and create user session.
     if (isset($_POST['login'])) {
         $username = $_POST['donorUsername'];    // removes backslashes
-        $password = $_POST['donorPW'];;
+        $password = $_POST['donorPW'];
         // Check user is exist in the database
         $query    = "SELECT * FROM donor_account WHERE email='$username'
                      AND password='$password'";
