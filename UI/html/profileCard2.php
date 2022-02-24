@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     if (isset($_POST['login'])) {
         $donor_username = $_POST['donorUsername'];
         $donor_password = $_POST['donorPW'];
@@ -34,6 +35,7 @@
       
       while($row = $result1->fetch_assoc()) { 
           $donor_id = $row["donor_id"];
+          $_SESSION['donor_id'] = $row["donor_id"];
           
     ?> 
     	 <!DOCTYPE html>
@@ -56,20 +58,7 @@
             </div>
 
             
-            <!-- The sidebar -->
-            <div class="sidebar">
-                <a class="active" href="profileCard.html">Profile</a>
-                <a href="donor_bookedDates.html">Booked Dates</a>
-                <a href="donor_previouDonations.html">Previous Donations</a>
-                <a href="donor_directRequest.html">Direct Requests</a>
-                <a href="donor_donationCampNotice.html">Donation Camps</a>
-                <br><br><br>
-                
-                <a class="booking" href="#about">Book a Date</a>
-            </div>
-            <?php
-            
-            ?>
+           
             <div class="display">
                 <?php
                     //next donations
@@ -97,7 +86,7 @@
                 ?>
                 <?php
                 //past donations and last donation is at the top
-                $sql2 = "SELECT * FROM online_donation WHERE  online_donation.donor_id = $donor_id AND online_donation.date < CURRENT_DATE()
+                $sql2 = "SELECT * FROM online_donation WHERE  online_donation.donor_id =$donor_id AND online_donation.date < CURRENT_DATE()
                 OR (online_donation.date = CURRENT_DATE() AND online_donation.time <= CURRENT_TIME()) ORDER BY donation_id DESC";
                 $result2 = $conn->query($sql2) or die($conn->error);
                 if ($result2->num_rows > 0) { 
@@ -114,6 +103,7 @@
                     }
                 }
                 ?>
+                <a class="booking" href="donor_prereq.html">Book a Date</a>
             </div>
 
 
