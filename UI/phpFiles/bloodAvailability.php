@@ -1,30 +1,51 @@
 <?php
      $hostname = "localhost";
      $username = "root";
-     $password = "nsr123sddn";
+     $password = "";
      $databaseName = "BLOODBANK";
 
     // connect to mysql
     $connect = mysqli_connect($hostname, $username, $password, $databaseName);
 
+    // only if the button is clicked
     if (isset($_POST['search'])) {
-        $district = $_POST['district'];    // removes backslashes
+
+        $district = $_POST['district'];    
         $bloodgroup = $_POST['bloodgrp'];
-        // mysql select query
-        $query = "SELECT * FROM blood_stock WHERE blood_group='$bloodgroup'";
+       
+
+        // select the name of the bb not the id
+        $query = "SELECT blood_bank_id FROM blood_stock WHERE 
+        (blood_bank_id = (SELECT blood_bank_id FROM blood_bank WHERE district = '$district')) & (blood_group = '$bloodgroup')";
+
+        // Perform query
+        $result = mysqli_query($connect, $query); 
+
+        $available = "Blood stock is available";
+        $not_available = "<br>No blood stocks of the given blood group available at the blood banks of the given district.<br><br>";
         
-
-        // result for method one
-        $result1 = mysqli_query($connect, $query);
-        
-
-        $dataRow = "";
-
-        while($row2 = mysqli_fetch_array($result1))
-        {
+        // if the query return any blood banks,
+        if ($result -> num_rows > 0){ // result is an array
             
-            $dataRow = $dataRow."<tr><td>$row2[1]</td><td>$row2[2]</td><td>$row2[0]</td></tr>";
+            $dataRow = "";
+            // fetch each element from the array
+            while ($row = mysqli_fetch_array($result)) {
+
+                // create a row of data to be displayed 
+                
+                $dataRow = $dataRow."<tr><td class=td2 >$row[0]</td><td class=td2 >$bloodgroup</td><td class=td2 >$available</td></tr>";
+    
+            }
+        // if no blood bags available in blood banks,
+        }else{
+
+            $dataRow = "";
+            $dataRow = $dataRow."<tr><td></td><td>$not_available</td><td></td></tr>";
         }
+            
+        
+    }else{
+        $dataRow = "";
     }
         
 
@@ -125,7 +146,7 @@
                 <th class="th2">Blood Bank</th>
                 <th class="th2">Blood Group</th>
                 <th class="th2">Availability</th>
-                <th class="th2">Last Updated Date</th>
+                <!-- <th class="th2">Last Updated Date</th> -->
             </tr>
                 
                 <?php echo $dataRow;?>
