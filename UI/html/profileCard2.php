@@ -34,6 +34,7 @@
       
       while($row = $result1->fetch_assoc()) { 
           $donor_id = $row["donor_id"];
+          
     ?> 
     	 <!DOCTYPE html>
         <html lang="en">
@@ -124,7 +125,7 @@
                 <h1> <?php echo $row["donor_fname"] . " " . $row["donor_lname"]; ?> </p> </h1>
                 <p class=""> <?php echo $row["district"] ?> </p> </p>
                 <p><?php echo "No of donations: " .$result2->num_rows; ?> </p>
-                <p><button>Contact</button></p>
+               
             </div> 
         </body>
         </html>

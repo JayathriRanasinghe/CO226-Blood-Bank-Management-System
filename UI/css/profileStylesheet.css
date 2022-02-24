@@ -1,6 +1,6 @@
 
 body{
-    background-color: rgb(251, 225, 225);
+    background-color: rgb(238, 207, 207);
 }
 h1 {
     color: darkred;
@@ -19,7 +19,7 @@ h1 {
     width: 218px;
 }
 .topNavigationBar a:hover{
-    background-color: rgb(192, 33, 33);
+    background-color: rgb(182, 34, 34);
     color: black;
 }
 
@@ -27,10 +27,11 @@ h1 {
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
-    max-height: 500px;
+    
+    min-height: 500px;
     margin-top:1%;
     margin-left: 16%;
-    background-color: #ddb2b2;
+    background-color: #9e7373;
     text-align: center;
     
   }
@@ -40,18 +41,7 @@ h1 {
     font-size: 18px;
   }
   
- .card button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
+
   
  .card a {
     text-decoration: none;
