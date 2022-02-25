@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Blood</title>
+    <link rel="stylesheet" href="../css/design.css">
+</head>
+<body>
+    <h1>Blood Bank Management System</h1>
+    <h2>something</h2>
+    <div class="topNavigationBar">
+        <a class="active" href="index.html">HOME</a>
+        <a href="../phpFiles/bloodAvailability.php">LOOKING FOR BLOOD</a>
+        <a href="donor.html">WANT TO DONATE</a>
+        <a href="aboutus.html">ABOUT US</a>
+
+    </div>
+
+    <div class="center">
+        
+        <h1>Hospital Requests</h1>
+        
+    </div>
+
+    <div>
+        <form class = "form" method="post" action="../phpFiles/requestBlood.php">
+
+            <p class="center"> Direct blood requesting facility is provided only for the Hospitals. Please enter the Hospital login number to proceed.<br></p>
+
+            <div class="center">
+                <label>Hospital Log In Number :&nbsp </label>
+                <input type="text" id="Hospital_login" name="Hospital_login">
+                
+                
+            </div>
+
+            <div class="center">
+                <input type="submit" name= "login" value="Log In">
+            </div>
+
+        </form>
+
+
+    </div>
+
+        
+    </div>
+</body>
+</html>

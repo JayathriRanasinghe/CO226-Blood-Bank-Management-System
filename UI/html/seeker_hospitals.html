@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Blood</title>
+    <link rel="stylesheet" href="../css/design.css">
+</head>
+<body>
+    <h1>Blood Bank Management System</h1>
+    <h2>something</h2>
+    <div class="topNavigationBar">
+        <a class="active" href="index.html">HOME</a>
+        <a href="seek.html">LOOKING FOR BLOOD</a>
+        <a href="donor.html">WANT TO DONATE</a>
+        <a href="aboutus.html">ABOUT US</a>
+    </div>
+    <div class="donorReg">
+        <h3>Blood Request Form</h3>
+        <form action="RequestBlood.php">
+            <table>
+                <h4>Hospital Details: </h4>
+                <tr>
+                    <td>Hospital name:</td>
+                    <td><input type="text" id="Hospitalname" name="Hospitalname"><br></td>
+                </tr>
+                
+                <tr>
+                    <td><label for="bloodbank">Select the blood bank: </label></td>
+                    <td>
+                        <select id="bloodbank" name="bloodbank">
+                            <option value="ampara">Ampara</option>
+                            <option value="anuradhapura">Anuradhapura</option>
+                            <option value="badulla">Badulla</option>
+                            <option value="batticaloa">Batticaloa</option>
+                            <option value="colombo">Colombo</option>
+                            <option value="galle">Galle</option>
+                            <option value="gampaha">Gampaha</option>
+                            <option value="hambanthota">Hambanthota</option>
+                            <option value="jaffna">Jaffna</option>
+                            <option value="kalutara">Kalutara</option>
+                            <option value="kandy">Kandy</option>
+                            <option value="kegalle">Kegalle</option>
+                            <option value="kilinochchi">Kilinochchi</option>
+                            <option value="kurunegala">Kurunegala</option>
+                            <option value="mannar">Mannar</option>
+                            <option value="matale">Matale</option>
+                            <option value="matara">Matara</option>
+                            <option value="moneragala">Moneragala</option>
+                            <option value="mullaitive">Mullaitivu</option>
+                            <option value="nuwaraeliya">Nuwara Eliya</option>
+                            <option value="polonnaruwa">Polonnaruwa</option>
+                            <option value="puttalam">Puttalam</option>
+                            <option value="ratnapura">Ratnapura</option>
+                            <option value="trinvimalee">Trincomalee</option>
+                            <option value="vavuniya">Vavuniya</option>
+
+                        </select>
+                    </td>
+                    
+                </tr>
+
+            </table> 
+            <br><br>
+
+            <table> 
+                <h4>Recepient Detials: </h4>
+                <tr>
+                    <td>Recepient NIC:</td>
+                    <td><input type="text" id="recepientNic" name="recepientNic"></td>
+                </tr>
+                <tr>
+                    <td>Blood Group:</td>
+                    <td><input type="text" id="bloodGroup" name="bloodGroup"></td>
+                </tr>
+                <tr>
+                    <td>Amount of blood units:</td>
+                    <td><input type="text" id="amount" name="amount"></td>
+                </tr>
+                <tr>
+                    <td>Comments:</td>
+                    <td><textarea id="comment" name="comment"></textarea></td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td> <input type="submit" value="Send Request"></td>
+                </tr>
+                
+            </table> 
+
+        </form>
+        
+    </div>
+</body>
+</html>
