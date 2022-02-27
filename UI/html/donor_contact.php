@@ -1,4 +1,5 @@
 <?php 
+    //this file is not connected to any thing[just an attempt]
     if (isset($_POST['login'])) {
         $donor_username = $_POST['donorUsername'];
         $donor_password = $_POST['donorPW'];
@@ -15,20 +16,13 @@
     // Checking mysql connection 
     if ($conn->connect_error) { 
       die("Connection failed: " . $conn->connect_error); 
-    } /*else{
-        echo "connected!";
-    }*/
-     
-    //echo $donor_username . ':' . $donor_password;
+    }
 
     // Writing a mysql query to retrieve data  
     $sql1 = "SELECT * FROM donor_account WHERE email='$donor_username' AND password='$donor_password'"; //donor_account table data
-   // $sql2 = "SELECT * FROM online_donation WHERE donor_account.donor_id = online_donation.donor_id ORDER BY donation_id DESC";
-   // $sql3 = "SELECT * FROM online_donation WHERE donor_account.donor_id = online_donation.donor_id ORDER BY donation_id DESC LIMIT 1";
     
     $result1 = $conn->query($sql1); 
-   // $result2 = $conn->query($sql2) or die($conn->error);
-   // $result3 = $conn->query($sql3);
+   
 }
     if ($result1->num_rows > 0) { 
       

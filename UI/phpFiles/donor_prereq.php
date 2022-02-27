@@ -1,9 +1,9 @@
 <?php
-    //echo "in php";
     require('../phpFiles/database.php');
+    
     // When form submitted, insert values into the database.
     session_start();
-    //$donor_id = $_SESSION['donor_id'];
+    
     if (isset($_POST['save'])) {
 
         $donor_weight = $_POST['weight'];
@@ -41,15 +41,6 @@
         $result   = mysqli_query($con, $query) or die(mysqli_error($con));
         
         if ($result) {
-            //echo "Successful!";
-            /*
-            echo "<div class='form'>
-                  <h3>You are registered successfully.</h3><br/>
-                  <p class='link'>Click here to <a href='../html/donor.html'>Login</a></p>
-                  </div>";
-            */
-            //echo "<script>location.href = '../html/donor.html';</script>";   
-            //echo "YOUR DATA IS SENT TO THE BLOODBANK. please check again with in an hour";    
             ?>
             <!DOCTYPE html>
             <html lang="en">

@@ -1,5 +1,5 @@
 <?php
-    //echo "in php";
+    
     require('database.php');
     // When form submitted, insert values into the database.
     if (isset($_POST['save'])) {
