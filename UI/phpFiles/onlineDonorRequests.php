@@ -26,9 +26,14 @@
             while ($row = mysqli_fetch_array($result)) {
 
                 // create a row of data to be displayed 
-                
-                $dataRow = $dataRow."<tr><td class=td2 >$row[1]</td><td class=td2 >$row[2]</td><td class=td2 >$row[3]</td><td class=td2 >$row[4]</td><td class=td2 ><button>button</button></td></tr>";
-    
+                $button_id_acc = 'acc'.$row[1];
+                $button_id_rej = 'rej'.$row[1];
+                //$id = $row[0]
+            
+                $dataRow = $dataRow."<tr><td class=td2 >$row[2]</td><td class=td2 >$row[3]</td><td class=td2 >$row[4]</td>
+                <td class=td2 >$row[5]</td><td class=td2 >
+                <button id = $button_id_acc onclick = \"acceptFunction(this.id)\">Accept</button><button id=$button_id_rej onclick = \"rejectFunction(this.id)\">Reject</button></td></tr>";
+               
             }
         // if no blood bags available in blood banks,
         }else{
@@ -40,27 +45,12 @@
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Bookings</title>
-    <link rel="stylesheet" href="../css/design.css">
-</head>
-<body>
-    <h1>Blood Bank Management System</h1>
-    <h2>Blood Stock Availability</h2>
-    <div class="topNavigationBar">
-        <a class="active" href="index.html">HOME</a>
-        <a href="seek.html">LOOKING FOR BLOOD</a>
-        <a href="donor.html">WANT TO DONATE</a>
-        <a href="aboutus.html">ABOUT US</a>
-    </div>
-    
 
-    <br><br><br>
+    <?php
+    require("navigationBar.php");
+    ?>
+
+    
 
     <div class="parent">
 
@@ -80,6 +70,48 @@
 
     </div>
     
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        //these two functions will handle the changing button color and updating database[request status of donor_prereq]
+        function acceptFunction(clicked){
+            //for accepting
+            document.getElementById(clicked).style.background="green";
+            
+            var id = clicked.slice(3);
+            document.getElementById('rej'+id).style.background="";
+            
+            var id = parseInt(clicked.slice(3));
+            
+            $.ajax({
+            url:"acceptRequest.php", //the page containing php script
+            type: "POST", //request type
+            data: {"id":id},
+            success:function(result){
+                    alert(result);
+                }
+            });
+        }
+
+        function rejectFunction(clicked){
+            //for rejecting
+            document.getElementById(clicked).style.background="red";
+            
+            var id = clicked.slice(3); //removing the 'rej' part to get the id
+            document.getElementById('acc'+id).style.background="";
+           
+            var id = parseInt(clicked.slice(3)); //string id -> int id
+            
+            //using ajax to pass to the test.php (for updating the database request status)
+            $.ajax({
+            url:"rejectRequest.php", //the page containing php script
+            type: "POST", //request type
+            data: {"id":id},
+            success:function(result){
+                    alert(result); //alerting the final result
+                }
+            });
+        }
+    </script>   
     
 </body>
 </html>
