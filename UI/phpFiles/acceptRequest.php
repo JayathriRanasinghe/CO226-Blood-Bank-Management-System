@@ -3,15 +3,21 @@
 
 require("database.php");
 $id = $_POST['id'];
-$query = "UPDATE donor_prerequisites 
+
+$query1 = "UPDATE donor_prerequisites 
         SET 
             request_status = 1
         WHERE
             donor_id = '$id'";
 
         
-        $result   = mysqli_query($con, $query) or die(mysqli_error($con));
+        $result   = mysqli_query($con, $query1) or die(mysqli_error($con));
         
+
+
+
+
+
         if ($result) {
             
             echo "Request Accepted!";     

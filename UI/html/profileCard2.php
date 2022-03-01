@@ -53,7 +53,7 @@
             <h1>Blood Bank Management System</h1>
             <h2>Your valuable donation saves 3 lives</h2>
             <div class="topNavigationBar">
-                <a class="active" href="profileCard.html">HOME</a>
+                <a class="active" href="profileCard2.html">HOME</a>
                 <a href="seek.html">LOOKING FOR BLOOD</a>
                 <a href="donor.html">WANT TO DONATE</a>
                 <a href="aboutus.html">ABOUT US</a>
@@ -71,8 +71,8 @@
                     // Show each data returned by mysql 
         
                         while($row3 = $result3->fetch_assoc()) { 
-                            $bb_id = $row3["blood_bank_id"];
-                            $sql4 = "SELECT district FROM blood_bank WHERE blood_bank.blood_bank_id = $bb_id";
+                            $bb_id = $row3["donor_id"];
+                            $sql4 = "SELECT blood_bank_name FROM donor_prerequisites WHERE donor_prerequisites.donor_id = $bb_id";
                             $result4 = $conn->query($sql4) or die($conn->error);
                             $row4 = $result4->fetch_assoc()
                 ?>
@@ -81,7 +81,7 @@
                     <div class="subTextDisplay">
                         <p><?php echo "DATE : ".$row3["date"] ?></p>
                         <p><?php echo "TIME : ".$row3["time"] ?></p>
-                        <p><?php echo "BLOODBANK : ".$row4["district"] ." blood bank"?></p>
+                        <p><?php echo "BLOODBANK : ".$row4["blood_bank_name"]?></p>
                     </div>
 
                     <?php
