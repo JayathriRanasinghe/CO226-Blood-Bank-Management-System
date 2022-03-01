@@ -67,12 +67,11 @@
 <body>
     <h1>Blood Bank Management System</h1>
     <h2>Blood Stock Availability</h2>
-    <div class="topNavigationBar">
-        <a class="active" href="index.html">HOME</a>
-        <a href="seek.html">LOOKING FOR BLOOD</a>
-        <a href="donor.html">WANT TO DONATE</a>
-        <a href="aboutus.html">ABOUT US</a>
-    </div>
+
+    <?php 
+    require("../phpFiles/navigatorBar.php");
+    ?>
+    
     <div class="donorLogin">
         <h3 style="text-align: center; color: brown;"> Search Blood Stock </h3>
         
