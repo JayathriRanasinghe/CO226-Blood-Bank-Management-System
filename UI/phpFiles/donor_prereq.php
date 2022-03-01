@@ -54,12 +54,11 @@
             <body>
                 <h1>Blood Bank Management System</h1>
                 <h2>Your valuable donation saves 3 lives</h2>
-                <div class="topNavigationBar">
-                    <a class="active" href="index.html">HOME</a>
-                    <a href="seek.html">LOOKING FOR BLOOD</a>
-                    <a href="donor.html">WANT TO DONATE</a>
-                    <a href="aboutus.html">ABOUT US</a>
-                </div>
+                <?php 
+                    require("../phpFiles/navigatorBar.php");
+                ?>
+
+    
                 <div class = "datasavingMessage">
                     <p>Your data has sent to the blood bank. Your date will be confirmed within an hour.<br>Thank you!</p>
                 </div>

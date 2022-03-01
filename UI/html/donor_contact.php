@@ -44,12 +44,8 @@
         <body>
             <h1>Blood Bank Management System</h1>
             <h2>Your valuable donation saves 3 lives</h2>
-            <div class="topNavigationBar">
-                <a class="active" href="profileCard.html">HOME</a>
-                <a href="seek.html">LOOKING FOR BLOOD</a>
-                <a href="donor.html">WANT TO DONATE</a>
-                <a href="aboutus.html">ABOUT US</a>
-            </div>
+            
+            <?php require("../phpFiles/navigatorBar.php"); ?>
 
             
             <!-- The sidebar -->

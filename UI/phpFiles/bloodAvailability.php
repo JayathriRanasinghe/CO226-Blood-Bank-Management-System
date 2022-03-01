@@ -15,8 +15,8 @@
        
 
         // select the name of the bb not the id
-        $query = "SELECT blood_bank_id FROM blood_stock WHERE 
-        (blood_bank_id = (SELECT blood_bank_id FROM blood_bank WHERE district = '$district')) & (blood_group = '$bloodgroup')";
+        $query = "SELECT blood_bank_name, blood_bank_address, contact_number FROM blood_bank WHERE blood_bank_id in (SELECT blood_bank_id FROM blood_stock WHERE 
+        (blood_bank_id in (SELECT blood_bank_id FROM blood_bank WHERE district = '$district')) & (blood_group = '$bloodgroup'))";
 
         // Perform query
         $result = mysqli_query($connect, $query); 
@@ -33,7 +33,11 @@
 
                 // create a row of data to be displayed 
                 
-                $dataRow = $dataRow."<tr><td class=td2 >$row[0]</td><td class=td2 >$bloodgroup</td><td class=td2 >$available</td></tr>";
+                $dataRow = $dataRow."<tr>
+                                     <td class=td2 >$row[0]<br>$row[1]<br>$row[2]</td>
+                                     <td class=td2 >$bloodgroup</td>
+                                     <td class=td2 >$available</td>
+                                     </tr>";
     
             }
         // if no blood bags available in blood banks,
@@ -63,17 +67,16 @@
 <body>
     <h1>Blood Bank Management System</h1>
     <h2>Blood Stock Availability</h2>
-    <div class="topNavigationBar">
-        <a class="active" href="index.html">HOME</a>
-        <a href="seek.html">LOOKING FOR BLOOD</a>
-        <a href="donor.html">WANT TO DONATE</a>
-        <a href="aboutus.html">ABOUT US</a>
-    </div>
+
+    <?php 
+    require("../phpFiles/navigatorBar.php");
+    ?>
+    
     <div class="donorLogin">
         <h3 style="text-align: center; color: brown;"> Search Blood Stock </h3>
         
     </div>
-    <div class="parent">
+    <div class="center">
 
     <form class="form" method="post" action="../phpFiles/bloodAvailability.php">
        
@@ -137,7 +140,7 @@
 
     <br><br><br>
 
-    <div class="parent">
+    <div class="center">
 
         <table class="table2">
 

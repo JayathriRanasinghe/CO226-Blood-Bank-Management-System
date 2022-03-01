@@ -32,33 +32,33 @@ CREATE TABLE blood_bank (
     blood_bank_name VARCHAR(100) NOT NULL,
     blood_bank_address VARCHAR(100) NOT NULL,
     district VARCHAR(20) NOT NULL,
-    contact_number CHAR(10),
-    chief_mo_nic VARCHAR(12)); 
+    contact_number VARCHAR(15),
+    chief_mo_nic CHAR(10)); 
 
 ALTER TABLE blood_bank AUTO_INCREMENT=1000;
 
 -- insert data into the blood bank table
 INSERT INTO blood_bank (blood_bank_name, blood_bank_address, district, contact_number, chief_mo_nic)
-VALUES ("BMT Sri Lanka", "National Blood Transfusion Services, Elvitigala Mawatha, Colombo 00500", "Colombo", "0112789654", "698622606v"),
-("NHSL Blood Bank", "Kynsey Rd, Colombo 00700", "Colombo", "0112369931", "711285520v"),
-("Central Blood Bank Narahenpita", "555 Elvitigala Mawatha, Colombo 00500", "Colombo", "0112789931", "725222261v"),
-("Blood Bank-CNTH", "Hospital Inner Road, Ragama 11010", "Gampaha", "0112960535", "735222261v"),
-("Blood Bank- Teaching Hospital-Kalubowila", "De Silva Rd, Dehiwala-Mount Lavinia", "Colombo", "0112763262", "681222226v"),
-("Blood Bank- Blood donation center in Negombo", "6R6X+QGG, Negombo", "Gampaha", "0332222261", "611284955v"),
-("Regional Blood Center - Maharagama", "RWQ9+39J, Boralesgamuwa 10280", "Colombo", "0112849525", "766222445v"),
-("Blood bank-Teaching Hospital-Peradeniya", "7H8W+FM4, Kandy", "Kandy", "0812222231", "737222961v"),
-("Blood bank-General Hospital-Kandy", "Teaching Hospital, William Gopallawa Mawatha, Kandy", "Kandy", "0812233337", "637222961v"),
+VALUES ("BMT Sri Lanka", "National Blood Transfusion Services, Elvitigala Mawatha, Colombo 00500", "Colombo", "0112789654", "6986226066"),
+("NHSL Blood Bank", "Kynsey Rd, Colombo 00700", "Colombo", "0112369931", "7112855200"),
+("Central Blood Bank Narahenpita", "555 Elvitigala Mawatha, Colombo 00500", "Colombo", "0112789931", "7252222261"),
+("Blood Bank-CNTH", "Hospital Inner Road, Ragama 11010", "Gampaha", "0112960535", "7352222261"),
+("Blood Bank- Teaching Hospital-Kalubowila", "De Silva Rd, Dehiwala-Mount Lavinia", "Colombo", "0112763262", "6812222261"),
+("Blood Bank- Blood donation center in Negombo", "6R6X+QGG, Negombo", "Gampaha", "0332222261", "6112849525"),
+("Regional Blood Center - Maharagama", "RWQ9+39J, Boralesgamuwa 10280", "Colombo", "0112849525", "7662222445"),
+("Blood bank-Teaching Hospital-Peradeniya", "7H8W+FM4, Kandy", "Kandy", "0812222231", "7372229617"),
+("Blood bank-General Hospital-Kandy", "Teaching Hospital, William Gopallawa Mawatha, Kandy", "Kandy", "0812233337", "6372229615"),
 ("Regional Blood Centre-General Hospital-Nagoda", "HX7P+3J7, Kalutara", "Kalutara", "034226529", "977330234v"),
-("National Blood Bank - Badulla", "Blood Bank, Daya Gunasekara Mawatha, Badulla", "Badulla", "0552222124", "691222606v"),
-("Blood bank Matara", "AH 43, Matara", "Matara", "0412227232", "833222261v"),
-("Blood Bank Udugama", "Udugama Base Hospital,Udugama, South", "Galle", "0914640650", "738223226v"),
+("National Blood Bank - Badulla", "Blood Bank, Daya Gunasekara Mawatha, Badulla", "Badulla", "0552222124", "6912226066"),
+("Blood bank Matara", "AH 43, Matara", "Matara", "0412227232", "8332222261"),
+("Blood Bank Udugama", "Udugama Base Hospital,Udugama, South", "Galle", "0914640650", "7382232261"),
 ("Blood bank- Tanniyutttu", "B296, Tanniyutttu", "Trincomalee", "0212061412", NULL),
-("Blood Bank-Dehiattakandiya", "Blood Bank, Base Hospital, Dehiattakandiya", "Ampara", "0632222261", "663222226v"),
-("Regional Blood Centre - Teaching Hospital Kurunegala", "F9H5+4Q2, Kurunegala", "Kurunegala", "0372229617", "621899022v"),
+("Blood Bank-Dehiattakandiya", "Blood Bank, Base Hospital, Dehiattakandiya", "Ampara", "0632222261", "6632222261"),
+("Regional Blood Centre - Teaching Hospital Kurunegala", "F9H5+4Q2, Kurunegala", "Kurunegala", "0372229617", "62189902261"),
 ("Regional Blood Centre -Jaffna", " Victoria Rd, Jaffna", "Jaffna", "0212223096", NULL),
-("Blood Bank - Teaching Hospital Karapitiya", "Hiribura Cross Rd, Karapitiya", "Galle", "0917222961", "661739022v"),
-("Blood Bank UHKDU", "University Hospital KDU, Boralesgamuwa", "Colombo", "0710245678", "581230800v"),
-("Blood Bank - General Hospital Gampaha", "General Hospital, Colombo Rd, Gampaha", "Gampaha", "0332289007", "725292226v");
+("Blood Bank - Teaching Hospital Karapitiya", "Hiribura Cross Rd, Karapitiya", "Galle", "0917222961", "66173902261"),
+("Blood Bank UHKDU", "University Hospital KDU, Boralesgamuwa", "Colombo", "0710245678", "5812308001"),
+("Blood Bank - General Hospital Gampaha", "General Hospital, Colombo Rd, Gampaha", "Gampaha", "0332289007", "7252922261");
 
 
 -- create table to store the admin details of each blood bank
@@ -98,7 +98,7 @@ CREATE TABLE donor_account (
 	donor_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     donor_fname VARCHAR(40) NOT NULL,
     donor_lname VARCHAR(40) NOT NULL,
-    donor_nic VARCHAR(12) NOT NULL,
+    donor_nic CHAR(10) NOT NULL,
     gender VARCHAR(10) NOT NULL,
     birthday DATE NOT NULL,
     address VARCHAR(150) NOT NULL,
@@ -141,7 +141,7 @@ VALUES("Janani","Abesekara","993541514V","female","1999-06-14","No.36 Sri Ramana
 ("Mahesh","Perera","196287933265","male","1962-03-25","No.45/2,Dutugamunu road,Thissapura","Ampara","O+","mahesh$Pe","maheshperera@gmail.com"),
 ("Semini","Madhusika","726935478V","female","1972-11-15","No.5/BC,C.W.W.Kannangara Road,Waththegama","Matale","A-","4546semini@","semini1115@gmail.com"),
 ("Ravindra","Gunarathna","934687198V","male","1993-09-19","No.151/2,Tangalle Road,Ambalantota","Hambanthota","B+","RG1234?&","ravindragun@gmail.com"),
-("Pushpa","Erathna","684796321V","female","1968-04-23","No.12/8,Isuru Uyana,Ballapitiya","Kaluthara","AB+","pushpa?123P","pushpa23@gmail.com"),
+("Pushpa","Erathna","684796321V","female""male","1968-04-23","No.12/8,Isuru Uyana,Ballapitiya","Kaluthara","AB+","pushpa?123P","pushpa23@gmail.com"),
 ("Anjalee","Wikramasinghe","886974321V","female","1988-12-25","No.48/M,Gothami Road,Imaduwa","Galle","O+","881225anj#","anjwickama@gmail.com"),
 ("Pushpika","Wijethunga","634795639V","female","1963-07-13","No.92, Stanley Thilakarathne Mawatha,Nugegoda","Colombo","B-","713push&?","pushpika132@gmail.com"),
 ("Gamini","Kumara","199348789666","male","1993-10-18","No.10/3,Water Supply area,Rathmalgahawewa","Anuradhapura","A+","gaminiK78","gamini1018@gmail.com"),
@@ -163,28 +163,28 @@ VALUES("Janani","Abesekara","993541514V","female","1999-06-14","No.36 Sri Ramana
 
 
 -- insert data to the donor_prerequisites table
-INSERT INTO donor_prerequisites (blood_bank_name, donor_id, age, weight, last_donated_date, medical_condition)
-VALUES("Central Blood Bank Narahenpita",1, 23, 55, NULL, "no any significant illness"),
-("Blood bank-General Hospital-Kandy",2, 30, 65, "2010-09-12", "no any significant illness"),
-("Regional Blood Centre - Teaching Hospital Kurunegala",3, 33, 61, "2015-12-09", "no any significant illness"),
-("Blood Bank- Blood donation center in Negombo",4, 53, 65, "2007-08-20", "no any significant illness"),
-("Blood Bank-Dehiattakandiya",5, 50, 59, "2016-08-03", "no any significant illness"),
-("Blood bank Matara",7, 29, 53, "2009-04-01", "no any significant illness"),
-("Regional Blood Centre-General Hospital-Nagoda",8, 34, 55, "2012-02-03", "no any significant illness"),
-("Blood Bank - Teaching Hospital Karapitiya",9, 34, 50, "2018-04-23", "no any significant illness"),
-("BMT Sri Lanka",10, 59, 70, "2007-10-09", "no any significant illness"),
-("Blood bank- Tanniyutttu",11, 29, 60, "2018-01-30", "no any significant illness"),
-("Blood bank-General Hospital-Kandy",13, 58, 58, "2017-05-09", "no any significant illness"),
-("Blood Bank UHKDU",15, 30, 68, "2015-09-25", "recovered from covid-19 3 months ago"),
-("Regional Blood Centre - Teaching Hospital Kurunegala",17, 38, 68, "2017-05-09", "no any significant illness"),
-("Blood Bank-Dehiattakandiya",18, 53, 49, "2015-05-23", "done heart surgery 2 years ago"),
-("National Blood Bank - Badulla",19, 44, 50, "2017-05-09", "no any significant illness"),
-("Blood Bank - Teaching Hospital Karapitiya",21, 22, 55, NULL, "no any significant illness"),
-("Regional Blood Center - Maharagama",22, 50, 67, "2009-05-09", "no any significant illness"),
-("Regional Blood Centre -Jaffna",23, 40, 64, "2014-07-29", "no any significant illness"),
-("Regional Blood Centre - Teaching Hospital Kurunegala",24, 43, 62, "2010-05-09", "currently no any significant illness. Has gone through a hernia surgery 2 years ago."),
-("Blood Bank - General Hospital Gampaha",25, 61, 59, "2016-07-01", "no any significant illness"),
-("Blood Bank- Teaching Hospital-Kalubowila",26, 28, 59, NULL, "no any significant illness");
+INSERT INTO donor_prerequisites (blood_bank_name, donor_id, age, weight, last_donated_date, medical_condition, request_status)
+VALUES("Central Blood Bank Narahenpita",1, 23, 55, NULL, "no any significant illness", 1),
+("Blood bank-General Hospital-Kandy",2, 30, 65, "2010-09-12", "no any significant illness", 1),
+("Regional Blood Centre - Teaching Hospital Kurunegala",3, 33, 61, "2015-12-09", "no any significant illness", 1),
+("Blood Bank- Blood donation center in Negombo",4, 53, 65, "2007-08-20", "no any significant illness", 1),
+("Blood Bank-Dehiattakandiya",5, 50, 59, "2016-08-03", "no any significant illness", 1),
+("Blood bank Matara",7, 29, 53, "2009-04-01", "no any significant illness", 1),
+("Regional Blood Centre-General Hospital-Nagoda",8, 34, 55, "2012-02-03", "no any significant illness", 1),
+("Blood Bank - Teaching Hospital Karapitiya",9, 34, 50, "2018-04-23", "no any significant illness", 1),
+("BMT Sri Lanka",10, 59, 70, "2007-10-09", "no any significant illness", 1),
+("Blood bank- Tanniyutttu",11, 29, 60, "2018-01-30", "no any significant illness", 1),
+("Blood bank-General Hospital-Kandy",13, 58, 58, "2017-05-09", "no any significant illness", 0),
+("Blood Bank UHKDU",15, 30, 68, "2015-09-25", "recovered from covid-19 3 months ago", 0),
+("Regional Blood Centre - Teaching Hospital Kurunegala",17, 38, 68, "2017-05-09", "no any significant illness", 0),
+("Blood Bank-Dehiattakandiya",18, 53, 49, "2015-05-23", "done heart surgery 2 years ago", 0),
+("National Blood Bank - Badulla",19, 44, 50, "2017-05-09", "no any significant illness", 0),
+("Blood Bank - Teaching Hospital Karapitiya",21, 22, 55, NULL, "no any significant illness", 0),
+("Regional Blood Center - Maharagama",22, 50, 67, "2009-05-09", "no any significant illness", 0),
+("Regional Blood Centre -Jaffna",23, 40, 64, "2014-07-29", "no any significant illness", 0),
+("Regional Blood Centre - Teaching Hospital Kurunegala",24, 43, 62, "2010-05-09", "currently no any significant illness. Has gone through a hernia surgery 2 years ago.", 0),
+("Blood Bank - General Hospital Gampaha",25, 61, 59, "2016-07-01", "no any significant illness", 0),
+("Blood Bank- Teaching Hospital-Kalubowila",26, 28, 59, NULL, "no any significant illness", 0);
 
 
 -- insert data to the online_donation table
@@ -307,33 +307,37 @@ CREATE TABLE hospital (
     blood_bank_id INT,
     blood_group VARCHAR(10),
     amount INT,
-    recepient_nic VARCHAR(12),
+    recepient_nic CHAR(10),
     request_status BOOLEAN, 
     FOREIGN KEY(blood_bank_id) REFERENCES blood_bank(blood_bank_id));
     
     
 -- insert data to the hospital(seekers) table
 INSERT INTO hospital(blood_bank_id, hospital_name, contact_number, recepient_nic, amount, blood_group)
-VALUES (1006, "Cancer Institute - Maharagama", "0112850252", "591234532v", 1, "O+"),
-(1001, "Castle Street Hospital for Women", "0112696231", "551230032v", 1, "A+"),
-(1000, "Central Hospital (Pvt) Ltd, Colombo", "0114665500", "521239320v", 1, "O+"),
+VALUES (1006, "Cancer Institute - Maharagama", "0112850252", "591234322v", 1, "O+"),
+(1001, "Castle Street Hospital for Women", "0112696231", "551230322v", 1, "A+"),
+(1000, "Central Hospital (Pvt) Ltd, Colombo", "0114665500", "521389320v", 1, "O+"),
 (1003, "Chest Hospital - Ragama", "0112958271", "451278532v", 1, "O-"),
-(1003, "Colombo (North) - Ragama", "0112959261","789423635v", 1, "B+"),
-(1004, "Colombo (South) - Kalubowila", "0112763065", "691235334v", 1, "O+"),
+(1003, "Colombo (North) - Ragama", "0112959261","789425635v", 1, "B+"),
+(1004, "Colombo (South) - Kalubowila", "0112763065", "691234534v", 1, "O+"),
 (1000, "Colombo General Hospital (National)", "0112691111", "791225732v", 1, "B-"),
-(1019, "Gampaha - General", "0332222261", "867262512v", 1, "AB-"),                     
-(1019, "Hemas Hospital, Kadawatha", "0117888888", "593531022v", 1, "A+"),
-(1016, "Jaffna Teaching Hospital", "0212222261", "481243530v", 1, "O+"),
-(1009, "Kalutara - General", "0342226162", "731238312v", 1, "A+"),
+(1019, "Gampaha - General", "0332222261", "867265312v", 1, "AB-"),                     
+(1019, "Hemas Hospital, Kadawatha", "0117888888", "593534102v", 1, "A+"),
+(1016, "Jaffna Teaching Hospital", "0212222261", "481243300v", 1, "O+"),
+(1009, "Kalutara - General", "0342226162", "731278312v", 1, "A+"),
 (1008, "Kandy Teaching Hospital", "0812233337", "671231300v", 1, "O+"),
 (1017, "Karapitiya Teaching Hospital", "0912232267", "512024527v", 1, "B+"),
-(1015, "Kurunegala Teaching Hospital", "0372222262", "591238452v", 1, "B-"),
-(1001, "Lady Ridgeway Hospital", "0112693712", "874165356v", 1, "A+"),
+(1015, "Kurunegala Teaching Hospital", "0372222262", "591293842v", 1, "B-"),
+(1001, "Lady Ridgeway Hospital", "0112693712", "877465356v", 1, "A+"),
 (1015, "Base Hospital Kuliyapitiya", "0378195421", "523456781v", 1, "O-"),
 (1016, "District General Hospital, Vavuniya", "0242892262", "791236745v", 1, "B-"),
 (1014, "District General Hospital, Ampara", "0632222290", "841238345v", 1, "A-"),
-(1008, "Asiri Hospital Kandy", "0814267262", "1999123452", 1, "B+"),
+(1008, "Asiri Hospital Kandy", "0814267262", "1999123852", 1, "B+"),
 (1003, "Leesons Hospital, Ragama", "0112892262", "811238334v", 1, "AB+");
+
+
+-- updating some rows in hospital table - update the request_status to 1 when the blood bank admin has checked the particular request
+update hospital set request_status  = 1 WHERE contact_number in ("0112850252", "0112696231", "0114665500");
 
 
 -- -- insert data to the organization table
@@ -344,7 +348,7 @@ VALUES ("Sri Lanka Red Cross","0112691095","106, Dharmapala Mawatha,Colombo 07",
 ("CSD welfare society","0112554797","23, Station Road, Bambalapitiya, Colombo 04",1002,25),
 ("First friend campus","0777230033","21,Sri Math Kuda Rathwatte Mawatha,Kandy",1004,15),
 ("Janasarana foundation","0114578263","Ward Place,Colombo 07",1001,12),
-("Celinco life","025-2234886","Anuradhapura Branch 5 54, Dharmapala Mawatha, Anuradhapura",1001,18),
+("Celinco life","0252234886","Anuradhapura Branch 5 54, Dharmapala Mawatha, Anuradhapura",1001,18),
 ("DIMO Lanka","0112449797","No:65,Jethawana Road,Colombo 14",1007,22),
 ("Sri lankan troops","0572227165","Army camp,Diyathalawa",1008,20),
 ("Sumathi holdings","0112352352"," 491 Galle Rd, Colombo",1004,24),
@@ -359,14 +363,5 @@ VALUES ("Sri Lanka Red Cross","0112691095","106, Dharmapala Mawatha,Colombo 07",
 ("Rotaract Club UOP","0774672331","Rotaract Club of University of Peradeniya, B364",1004,26),
 ("LOLC Insurance","0115500880","481 T. B. Jayah Mawatha, Colombo 01000",1008,40);
 
-
--- updating some rows in prerequisite table - update the request_status to 1 when the blood bank admin has checked the particular request
-update donor_prerequisites set request_status = 1 WHERE donor_id in (1, 2, 3, 10, 11, 13, 15, 25, 26);
-
-
--- updating some rows in hospital table - update the request_status to 1 when the blood bank admin has checked the particular request
-update hospital set request_status = 1 WHERE contact_number in ("0112850252", "0112696231", "0114665500");
-
-
 -- updating some rows in organization table - update the request_status to 1 when the blood bank admin has checked the particular request
-update organization set request_status = 1 WHERE donationcamp_id in (1,2,3,4,5,6,7,8,9,10);
+update organization set request_status  = 1 WHERE donationcamp_id in (1,2,3,4,5,6,7,8,9,10);
