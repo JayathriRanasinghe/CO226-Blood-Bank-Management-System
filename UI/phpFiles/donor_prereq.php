@@ -5,7 +5,7 @@
     session_start();
     
     if (isset($_POST['save'])) {
-
+        $blood_bank = $_POST['bloodbank'];
         $donor_weight = $_POST['weight'];
         $donor_age = $_POST['age'];
         $last_donation_date = $_POST['last_donation_date'];
@@ -18,6 +18,7 @@
         */
         $query = 
         "INSERT INTO donor_prerequisites(
+            blood_bank_name,
             donor_id,
             age,
             weight,
@@ -25,6 +26,7 @@
             medical_condition
             )
         VALUES (
+            '$blood_bank',
             ".$_SESSION['donor_id'].",
             '$donor_age',
             '$donor_weight',
@@ -33,6 +35,7 @@
             ) 
             ON DUPLICATE KEY 
         UPDATE 
+            blood_bank_name = '$blood_bank',
             age = '$donor_age',
             weight = '$donor_weight',
             last_donated_date = '$last_donation_date',
