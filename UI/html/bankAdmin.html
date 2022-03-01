@@ -1,32 +1,54 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank Admin</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/design.css">
 </head>
 <body>
     <h1>Blood Bank Management System</h1>
-    <div class="bankAdminLogin">
+    <h2>Your valuable donation saves 3 lives</h2>
+    <div class="topNavigationBar">
+        <a class="active" href="index.html">HOME</a>
+    
+        <div class="dropdown">
+            <button class="dropbtn">LOOKING FOR BLOOD 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+    
+              <a href="../phpFiles/bloodAvailability.php">Check Blood Availability</a>
+              <a href="../html/hospitalReq.html">Request Blood</a>
+              
+            </div>
+        </div> 
+    
+        <a href="donor.html">WANT TO DONATE</a>
+        <a href="aboutus.html">ABOUT US</a>
+    </div>
+    <div class="donorLogin">
         <h3>Login</h3>
-        <form action="bankAdminLogin.php">
+        <form class = "form" method="POST" action="bloodBank.php">
             <table>
                 <tr>
-                <td>Username:</td>
-                <td><input type="text" id="bloodbankUsername" name="bloodbankUsername"><br></td>
-                </tr>
+                    <td>Admin name:</td>
+                    <td><input type="text" id="AdminName" name="AdminName"><br></td>
+                    </tr>
                 <tr>
-                <td>Password:</td>
-                <td><input type="password" id="bloodbankPW" name="bloodbankPW"><br></td>
+                <td>Blood bank ID:</td>
+                <td><input type="password" id="BloodBankID" name="BloodBankID"><br></td>
                 </tr>
+
                 <tr>
                     <td></td>
-                    <td> <input type="submit" value="Login"></td>
+                    <td> <input type="submit" name="login" value="Login"></td>
                 </tr>
             </table> 
         </form>
+        
     </div>
-    
 </body>
 </html>
