@@ -26,9 +26,13 @@
             while ($row = mysqli_fetch_array($result)) {
 
                 // create a row of data to be displayed 
-                
-                $dataRow = $dataRow."<tr><td class=td2 >$row[1]</td><td class=td2 >$row[2]</td><td class=td2 >$row[3]</td><td class=td2 >$row[4]</td><td class=td2 ><button>button</button></td></tr>";
-    
+                $button_id_acc = 'acc'.$row[0];
+                $button_id_rej = 'rej'.$row[0];
+            
+                $dataRow = $dataRow."<tr><td class=td2 >$row[1]</td><td class=td2 >$row[2]</td><td class=td2 >$row[3]</td>
+                <td class=td2 >$row[4]</td><td class=td2 >
+                <button id = $button_id_acc onclick = \"acceptFunction(this.id)\">Accept</button><button id=$button_id_rej onclick = \"rejectFunction(this.id)\">Reject</button></td></tr>";
+               
             }
         // if no blood bags available in blood banks,
         }else{
@@ -40,27 +44,12 @@
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Bookings</title>
-    <link rel="stylesheet" href="../css/design.css">
-</head>
-<body>
-    <h1>Blood Bank Management System</h1>
-    <h2>Blood Stock Availability</h2>
-    <div class="topNavigationBar">
-        <a class="active" href="index.html">HOME</a>
-        <a href="seek.html">LOOKING FOR BLOOD</a>
-        <a href="donor.html">WANT TO DONATE</a>
-        <a href="aboutus.html">ABOUT US</a>
-    </div>
-    
 
-    <br><br><br>
+    <?php
+    require("navigationBar.php");
+    ?>
+
+    
 
     <div class="parent">
 
@@ -79,7 +68,15 @@
         </table>
 
     </div>
-    
+<script>
+    function acceptFunction(clicked){
+        document.getElementById(clicked).style.background="green";
+    }
+
+    function rejectFunction(clicked){
+        document.getElementById(clicked).style.background="red";
+    }
+</script>   
     
 </body>
 </html>
