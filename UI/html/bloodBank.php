@@ -34,10 +34,7 @@
         <a href="aboutus.html">ABOUT US</a>
     </div>
     <?php
-<<<<<<< HEAD
     session_start();
-=======
->>>>>>> 764cd4aedce9e9646dc345bd3cb2f6014617a7e7
      $hostname = "localhost";
      $username = "root";
      $password = "";
@@ -46,11 +43,7 @@
     // connect to mysql
     $connect = mysqli_connect($hostname, $username, $password, $databaseName);
     $id = $_POST["BloodBankID"] ;
-<<<<<<< HEAD
     $retriveFromAdmin = "SELECT blood_bank_name,blood_bank_id,blood_bank_address,district,contact_number,chief_mo_nic FROM blood_bank WHERE blood_bank_id = $id";
-=======
-    $retriveFromAdmin = "SELECT blood_bank_name,blood_bank_address,district,contact_number,chief_mo_nic FROM blood_bank WHERE blood_bank_id = $id";
->>>>>>> 764cd4aedce9e9646dc345bd3cb2f6014617a7e7
     $retriveResult = mysqli_query($connect,$retriveFromAdmin);
 
     while($row = mysqli_fetch_assoc($retriveResult)){
@@ -64,13 +57,9 @@
          echo"Contact number    :- {$row['contact_number']}";
          echo"<br>";
          echo"Chief MO NIC      :- {$row['chief_mo_nic']}";
-<<<<<<< HEAD
-            $bb_id = $row['blood_bank_id'];
+            
             $_SESSION['bb_id'] = $row['blood_bank_id'];
-            echo $bb_id;
-=======
-
->>>>>>> 764cd4aedce9e9646dc345bd3cb2f6014617a7e7
+            
     }
 
     mysqli_close($connect);
@@ -78,11 +67,7 @@
 
 ?>
     <div class="ycontainer">
-<<<<<<< HEAD
         <a href = "../phpFiles/onlineDonorRequests.php">
-=======
-        <a href = "donorBookings.html">
->>>>>>> 764cd4aedce9e9646dc345bd3cb2f6014617a7e7
             <button class = "btn btn1" >Donor bookings</button>
         </a>
         <a href = "organizationRequest.php">
