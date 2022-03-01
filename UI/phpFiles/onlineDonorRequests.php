@@ -47,11 +47,10 @@
 
 
     <?php
-    require("navigationBar.php");
+    require("navigatorBar.php");
     ?>
 
     
-
     <div class="parent">
 
         <table class="table3">  

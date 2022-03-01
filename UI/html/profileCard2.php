@@ -52,6 +52,7 @@
         <body>
             <h1>Blood Bank Management System</h1>
             <h2>Your valuable donation saves 3 lives</h2>
+            
             <div class="topNavigationBar">
                 <a class="active" href="index.html">HOME</a>
 
