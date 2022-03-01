@@ -28,4 +28,23 @@ donor prerequiristics table <BB_side> ---[onlineDonorRequests.php]
 
 [NETHMI]
 
+hospital requests -----------------------------[hospitalReq.html]
+            a page asking to fill the req form - click it
+request form ----------------[seeker_hospitals.php]
+            enter the data in the form
+            blood availability part not included bcz it messes everything -_-
+            click send request
+            it will give a msg saying request sent to blood bank
+admin page to accept hospital requests <BB_side> ------------------------[onlineHospitalRequests.php]
+            after accept button pressed [acceptRequest.php]
+            after reject button pressed [rejectRequest.php]
+            accept part not done yet
+
+blood availability ----------[bloodAvailability.php]
+
+top navigator bar -------------------- [navigatorBar.php]
+            this is the correct one
+            if php file -> use php require command in a php file 
+            if html file -> copy paste the code in html file (but the css file used for the navigator bar is design.css)            
+
 [SATHSARANI]
