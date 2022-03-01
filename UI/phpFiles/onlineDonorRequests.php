@@ -26,11 +26,12 @@
             while ($row = mysqli_fetch_array($result)) {
 
                 // create a row of data to be displayed 
-                $button_id_acc = 'acc'.$row[0];
-                $button_id_rej = 'rej'.$row[0];
+                $button_id_acc = 'acc'.$row[1];
+                $button_id_rej = 'rej'.$row[1];
+                //$id = $row[0]
             
-                $dataRow = $dataRow."<tr><td class=td2 >$row[1]</td><td class=td2 >$row[2]</td><td class=td2 >$row[3]</td>
-                <td class=td2 >$row[4]</td><td class=td2 >
+                $dataRow = $dataRow."<tr><td class=td2 >$row[2]</td><td class=td2 >$row[3]</td><td class=td2 >$row[4]</td>
+                <td class=td2 >$row[5]</td><td class=td2 >
                 <button id = $button_id_acc onclick = \"acceptFunction(this.id)\">Accept</button><button id=$button_id_rej onclick = \"rejectFunction(this.id)\">Reject</button></td></tr>";
                
             }
@@ -68,15 +69,45 @@
         </table>
 
     </div>
-<script>
-    function acceptFunction(clicked){
-        document.getElementById(clicked).style.background="green";
-    }
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        //these two functions will handle the changing button color and updating database[request status of donor_prereq]
+        function acceptFunction(clicked){
+            //for accepting
+            document.getElementById(clicked).style.background="green";
+            
+            var id = clicked.slice(3);
+            var id = parseInt(clicked.slice(3));
+            
+            $.ajax({
+            url:"acceptRequest.php", //the page containing php script
+            type: "POST", //request type
+            data: {"id":id},
+            success:function(result){
+                    alert(result);
+                }
+            });
+        }
 
-    function rejectFunction(clicked){
-        document.getElementById(clicked).style.background="red";
-    }
-</script>   
+        function rejectFunction(clicked){
+            //for rejecting
+            document.getElementById(clicked).style.background="red";
+            
+            var id = clicked.slice(3); //removing the 'rej' part to get the id
+            var id = parseInt(clicked.slice(3)); //string id -> int id
+            
+            //using ajax to pass to the test.php (for updating the database request status)
+            $.ajax({
+            url:"rejectRequest.php", //the page containing php script
+            type: "POST", //request type
+            data: {"id":id},
+            success:function(result){
+                    alert(result); //alerting the final result
+                }
+            });
+        }
+    </script>   
     
 </body>
 </html>
