@@ -84,8 +84,4 @@
 
 
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> 764cd4aedce9e9646dc345bd3cb2f6014617a7e7
