@@ -78,6 +78,8 @@
             document.getElementById(clicked).style.background="green";
             
             var id = clicked.slice(3);
+            document.getElementById('rej'+id).style.background="";
+            
             var id = parseInt(clicked.slice(3));
             
             $.ajax({
@@ -95,6 +97,8 @@
             document.getElementById(clicked).style.background="red";
             
             var id = clicked.slice(3); //removing the 'rej' part to get the id
+            document.getElementById('acc'+id).style.background="";
+           
             var id = parseInt(clicked.slice(3)); //string id -> int id
             
             //using ajax to pass to the test.php (for updating the database request status)

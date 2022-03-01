@@ -9,7 +9,7 @@ $query = "UPDATE donor_prerequisites
         WHERE
             donor_id = '$id'";
 
-        echo $id;
+        
         $result   = mysqli_query($con, $query) or die(mysqli_error($con));
         
         if ($result) {
