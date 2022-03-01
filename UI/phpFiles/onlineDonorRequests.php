@@ -1,4 +1,5 @@
 <?php
+    session_start();
      $hostname = "localhost";
      $username = "root";
      $password = "";
@@ -8,12 +9,12 @@
     $connect = mysqli_connect($hostname, $username, $password, $databaseName);
 
     // only if the button is clicked
-       
-
+    
         // select the name of the bb not the id
-        $query = "SELECT donor_prerequisites.*, donor_account.donor_fname, donor_account.donor_lname 
-        FROM donor_prerequisites,donor_account 
-        WHERE donor_prerequisites.donor_id = donor_account.donor_id AND request_status IS NULL";
+        $query = "SELECT DISTINCT donor_prerequisites.*, donor_account.donor_fname, donor_account.donor_lname 
+        FROM donor_prerequisites,donor_account,blood_bank 
+        WHERE donor_prerequisites.donor_id = donor_account.donor_id AND request_status IS NULL 
+        AND donor_prerequisites.blood_bank_name =(SELECT blood_bank_name FROM blood_bank WHERE blood_bank_id = ".$_SESSION['bb_id'].")";
 
 
         // Perform query
