@@ -8,57 +8,48 @@
     <link rel="stylesheet" href="../css/design.css">
 </head>
 <body>
-    <h1>Blood Bank Management System</h1>
-    <h2>something</h2>
+    
     
 
-    <div class="topNavigationBar">
-        <a class="active" href="index.html">HOME</a>
-    
-        <div class="dropdown">
-            <button class="dropbtn">LOOKING FOR BLOOD 
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-    
-              <a href="../phpFiles/bloodAvailability.php">Check Blood Availability</a>
-              <a href="../html/hospitalReq.html">Request Blood</a>
-              
-            </div>
-        </div> 
-    
-        <a href="donor.html">WANT TO DONATE</a>
-        <a href="aboutus.html">ABOUT US</a>
-    </div>
+    <div class="imageContainer" id="imageContainer">
+        <div class="topNavigationBar">
+          <img>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="lookingForBlood.html">Looking for blood</a></li>
+            <li><a href="donor.html">Want to donate</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+          </ul>
+        </div>
 
-    <div class="center">
+        <div class="content">
         
-        <h1>Hospital Requests</h1>
+            <h1>Hospital Requests</h1>
+            
         
-    </div>
+            <!-- <form class = "form" method="post" action="../phpFiles/requestBlood.php"> -->
+    
+                <p class="center" style="text-align: center;"> Direct blood requesting facility is provided only for the Hospitals. The blood bank will consider your request and contact you ASAP.<br>
+                Please fill the Blood Request Form to send your request.</p>
+    
+                <!-- <div class="center">
+                    <label>Contact Number :&nbsp </label>
+                    <input type="text" id="Hospital_login" name="Hospital_login">
+    
+                </div>-->
+    
+                
+                <a href="../html/seeker_hospitals.php">
+                    <button type="button"><span></span>Fill the Request Form</button>
+                </a>
+    
+            <!-- </form> -->
+    
+    
+        </div>
+          
+      </div>
 
-    <div>
-        <!-- <form class = "form" method="post" action="../phpFiles/requestBlood.php"> -->
-
-            <p class="center" style="text-align: center;"> Direct blood requesting facility is provided only for the Hospitals. The blood bank will consider your request and contact you ASAP.<br>
-            Please fill the Blood Request Form to send your request.</p>
-
-            <!-- <div class="center">
-                <label>Contact Number :&nbsp </label>
-                <input type="text" id="Hospital_login" name="Hospital_login">
-
-            </div>-->
-
-            <div class="center">
-                <a href="../html/seeker_hospitals.php">Fill the Request Form</a>
-            </div> 
-
-        <!-- </form> -->
-
-
-    </div>
-
-        
-    </div>
+    
 </body>
 </html>

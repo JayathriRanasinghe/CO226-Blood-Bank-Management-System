@@ -48,3 +48,9 @@ top navigator bar -------------------- [navigatorBar.php]
             if html file -> copy paste the code in html file (but the css file used for the navigator bar is design.css)            
 
 [SATHSARANI]
+
+
+
+*******************************************************NOTES*************************************************************
+bankAdmin.html - blood bank admin logged into the system -------------> [bloodBank.php]
+*************************************************************************************************************************

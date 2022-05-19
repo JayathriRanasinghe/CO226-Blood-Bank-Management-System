@@ -62,87 +62,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/design.css">
+    <link rel="stylesheet" href="../css/forTablePages.css">
 </head>
-<body>
-    <h1>Blood Bank Management System</h1>
-    <h2>Blood Stock Availability</h2>
+<body>  
+    <div class="imageContainer" id="imageContainer">
+      <div class="topNavigationBar">
+        <img>
+        <ul>
+          <li><a href="../html/main.html">Home</a></li>
+          <li><a href="../html/lookingForBlood.html">Looking for blood</a></li>
+          <li><a href="../html/donor.html">Want to donate</a></li>
+          <li><a href="../html/aboutus.html">About us</a></li>
+        </ul>
+      </div>
+    <h1 style="text-align: center; color: brown;"> Search Blood Stock </h1>   
+     
+    <div class="main">
 
-    <?php 
-    require("../phpFiles/navigatorBar.php");
-    ?>
+        <form class="form" method="post" action="../phpFiles/bloodAvailability.php"> 
+            <div class="select">  
+            <label class="label1">Select District: </label>
+                <select class="district" id="district" name="district">
+                    <option value="ampara">Ampara</option>
+                    <option value="anuradhapura">Anuradhapura</option>
+                    <option value="badulla">Badulla</option>
+                    <option value="batticaloa">Batticaloa</option>
+                    <option value="colombo">Colombo</option>
+                    <option value="galle">Galle</option>
+                    <option value="gampaha">Gampaha</option>
+                    <option value="hambanthota">Hambanthota</option>
+                    <option value="jaffna">Jaffna</option>
+                    <option value="kalutara">Kalutara</option>
+                    <option value="kandy">Kandy</option>
+                    <option value="kegalle">Kegalle</option>
+                    <option value="kilinochchi">Kilinochchi</option>
+                    <option value="kurunegala">Kurunegala</option>
+                    <option value="mannar">Mannar</option>
+                    <option value="matale">Matale</option>
+                    <option value="matara">Matara</option>
+                    <option value="moneragala">Moneragala</option>
+                    <option value="mullaitive">Mullaitivu</option>
+                    <option value="nuwaraeliya">Nuwara Eliya</option>
+                    <option value="polonnaruwa">Polonnaruwa</option>
+                    <option value="puttalam">Puttalam</option>
+                    <option value="ratnapura">Ratnapura</option>
+                    <option value="trincomalee">Trincomalee</option>
+                    <option value="vavuniya">Vavuniya</option>
+                </select>
+                 
+            <label class="label2">Select Blood Group: </label>
+                <select class="bloodGroup" id="bloodgrp" name="bloodgrp">
+                    <option value="O+">O+</option>
+                    <option value="A+">A+</option>
+                    <option value="B+">B+</option>
+                    <option value="O-">O-</option>
+                    <option value="A-">A-</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+                <input class="searchButton" type="submit" name="search" value="Search">
+            </div>
+            
+    </div>
+
     
-    <div class="donorLogin">
-        <h3 style="text-align: center; color: brown;"> Search Blood Stock </h3>
-        
-    </div>
-    <div class="center">
-
-    <form class="form" method="post" action="../phpFiles/bloodAvailability.php">
-       
-    <table><tr>
-    <td>
-        <label>Select District: </label>
-        <select id="district" name="district">
-            <option value="ampara">Ampara</option>
-            <option value="anuradhapura">Anuradhapura</option>
-            <option value="badulla">Badulla</option>
-            <option value="batticaloa">Batticaloa</option>
-            <option value="colombo">Colombo</option>
-            <option value="galle">Galle</option>
-            <option value="gampaha">Gampaha</option>
-            <option value="hambanthota">Hambanthota</option>
-            <option value="jaffna">Jaffna</option>
-            <option value="kalutara">Kalutara</option>
-            <option value="kandy">Kandy</option>
-            <option value="kegalle">Kegalle</option>
-            <option value="kilinochchi">Kilinochchi</option>
-            <option value="kurunegala">Kurunegala</option>
-            <option value="mannar">Mannar</option>
-            <option value="matale">Matale</option>
-            <option value="matara">Matara</option>
-            <option value="moneragala">Moneragala</option>
-            <option value="mullaitive">Mullaitivu</option>
-            <option value="nuwaraeliya">Nuwara Eliya</option>
-            <option value="polonnaruwa">Polonnaruwa</option>
-            <option value="puttalam">Puttalam</option>
-            <option value="ratnapura">Ratnapura</option>
-            <option value="trincomalee">Trincomalee</option>
-            <option value="vavuniya">Vavuniya</option>
-
-        </select>
-    </td>
-
-    <td><label> &nbsp;&nbsp;|&nbsp;&nbsp; </label></td>
-
-    <td>
-        <label>Select Blood Group: </label>
-        <select id="bloodgrp" name="bloodgrp">
-            <option value="O+">O+</option>
-            <option value="A+">A+</option>
-            <option value="B+">B+</option>
-            <option value="O-">O-</option>
-            <option value="A-">A-</option>
-            <option value="B-">B-</option>
-            <option value="AB+">AB+</option>
-            <option value="AB-">AB-</option>
-
-        </select>
-
-    </td>
-
-    </tr></table>
-    </div>
-
-    <div class="center">
-        <input type="submit" name= "search" value="Search">
-    </div>
 
     <br><br><br>
 
-    <div class="center">
+    <div class="center3">
 
-        <table class="table2">
+        <table class="content-table">
 
             
             <tr>
@@ -159,10 +149,14 @@
             </tr>
     
         </table>
-
-    </form>
+        </form>
+   
     
     </div>
+        
+    </div>
+    
+    
     
     
 </body>

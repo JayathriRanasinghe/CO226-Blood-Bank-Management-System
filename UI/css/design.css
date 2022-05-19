@@ -1,25 +1,80 @@
-body{
-    background-color: rgb(251, 225, 225);
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
-h1 {
-    color: darkred;
+.imageContainer{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0.50)),url(../images/mainBackground.jpg);
+    background-size: cover;
+    background-position: center;
+
 }
+
+.imageContainer h2{
+    color: #fff;
+}
+
+
 .topNavigationBar{
-    background-color: rgb(216, 105, 105);
-    overflow: hidden;
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
 }
-.topNavigationBar a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+
+.topNavigationBar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.topNavigationBar ul li a{
     text-decoration: none;
-    font-size: 17px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
 }
-.topNavigationBar a:hover{
-    background-color: rgb(192, 33, 33);
-    color: black;
+
+.topNavigationBar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
 }
+
+.topNavigationBar ul li:hover::after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1{
+    font-size: 40px;
+    margin-top: 80px;
+}
+
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+
 
 .selectUserType h3{
     color: black;
@@ -38,6 +93,14 @@ h1 {
     border: 3px solid rgb(255, 255, 255);
     border-collapse: collapse;
     background-color: rgb(231, 86, 42);
+}
+
+.center{
+    color: aliceblue;
+}
+
+.donorLogin{
+    color: #f9f9f9;
 }
 
 .parent {
@@ -148,4 +211,50 @@ h1 {
     background-color: rgb(10, 128, 6);
     color: white;
   }
+
+  table{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-collapse: collapse;
+      width: 800px;
+      height: 200px;
+      border: 1px solid #f9f9f9;
+      box-shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0,0.2);
+  }
   
+  button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    cursor: pointer;
+    color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background:#009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+}

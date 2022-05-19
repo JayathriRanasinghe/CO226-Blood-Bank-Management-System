@@ -8,114 +8,108 @@
     <link rel="stylesheet" href="../css/design.css">
 </head>
 <body>
-    <h1>Blood Bank Management System</h1>
-    <h2>Your valuable donation saves 3 lives</h2>
     
+    <div class="imageContainer" id="imageContainer">
+        <div class="topNavigationBar">
+          <img>
+          <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="lookingForBlood.html">Looking for blood</a></li>
+            <li><a href="donor.html">Want to donate</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+          </ul>
+        </div>
 
-    <div class="topNavigationBar">
-        <a class="active" href="index.html">HOME</a>
+        <div class="content">
+            <h3>Register</h3>
+            <form class="form" method="post" action="../phpFiles/register_form.php">
+                <table>
+                    <tr>
+                        <td>First name:</td>
+                        <td><input type="text" id="donorFirstname" name="donorFirstname"><br></td>
+                        <td>Last name:</td>
+                        <td><input type="text" id="donorLastname" name="donorLastname"><br></td>
+                    </tr>
+                    <tr>
+                        <td>NIC:</td>
+                        <td><input type="text" id="nic" name="nic"><br></td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td><input type="radio" id="gender_male" name="gender" value="male"> <label for="male">Male</label><br>
+                            <input type="radio" id="gender_female" name="gender" value="female"> <label for="female">Female</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Birthday:</td>
+                        <td><input type="date" id="donor_bday" name="donor_bday"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="district">District:</label></td>
+                        <td>
+                            <select id="district" name="district">
+                                <option value="ampara">Ampara</option>
+                                <option value="anuradhapura">Anuradhapura</option>
+                                <option value="badulla">Badulla</option>
+                                <option value="batticaloa">Batticaloa</option>
+                                <option value="colombo">Colombo</option>
+                                <option value="galle">Galle</option>
+                                <option value="gampaha">Gampaha</option>
+                                <option value="hambanthota">Hambanthota</option>
+                                <option value="jaffna">Jaffna</option>
+                                <option value="kalutara">Kalutara</option>
+                                <option value="kandy">Kandy</option>
+                                <option value="kegalle">Kegalle</option>
+                                <option value="kilinochchi">Kilinochchi</option>
+                                <option value="kurunegala">Kurunegala</option>
+                                <option value="mannar">Mannar</option>
+                                <option value="matale">Matale</option>
+                                <option value="matara">Matara</option>
+                                <option value="moneragala">Moneragala</option>
+                                <option value="mullaitive">Mullaitivu</option>
+                                <option value="nuwaraeliya">Nuwara Eliya</option>
+                                <option value="polonnaruwa">Polonnaruwa</option>
+                                <option value="puttalam">Puttalam</option>
+                                <option value="ratnapura">Ratnapura</option>
+                                <option value="trincomalee">Trincomalee</option>
+                                <option value="vavuniya">Vavuniya</option>
     
-        <div class="dropdown">
-            <button class="dropbtn">LOOKING FOR BLOOD 
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-    
-              <a href="../phpFiles/bloodAvailability.php">Check Blood Availability</a>
-              <a href="../html/hospitalReq.html">Request Blood</a>
-              
-            </div>
-        </div> 
-    
-        <a href="donor.html">WANT TO DONATE</a>
-        <a href="aboutus.html">ABOUT US</a>
-    </div>
-    <div class="donorReg">
-        <h3>Register</h3>
-        <form class="form" method="post" action="../phpFiles/register_form.php">
-            <table>
-                <tr>
-                    <td>First name:</td>
-                    <td><input type="text" id="donorFirstname" name="donorFirstname"><br></td>
-                    <td>Last name:</td>
-                    <td><input type="text" id="donorLastname" name="donorLastname"><br></td>
-                </tr>
-                <tr>
-                    <td>NIC:</td>
-                    <td><input type="text" id="nic" name="nic"><br></td>
-                </tr>
-                <tr>
-                    <td>Gender:</td>
-                    <td><input type="radio" id="gender_male" name="gender" value="male"> <label for="male">Male</label><br>
-                        <input type="radio" id="gender_female" name="gender" value="female"> <label for="female">Female</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Birthday:</td>
-                    <td><input type="date" id="donor_bday" name="donor_bday"><br></td>
-                </tr>
-                <tr>
-                    <td><label for="district">District:</label></td>
-                    <td>
-                        <select id="district" name="district">
-                            <option value="ampara">Ampara</option>
-                            <option value="anuradhapura">Anuradhapura</option>
-                            <option value="badulla">Badulla</option>
-                            <option value="batticaloa">Batticaloa</option>
-                            <option value="colombo">Colombo</option>
-                            <option value="galle">Galle</option>
-                            <option value="gampaha">Gampaha</option>
-                            <option value="hambanthota">Hambanthota</option>
-                            <option value="jaffna">Jaffna</option>
-                            <option value="kalutara">Kalutara</option>
-                            <option value="kandy">Kandy</option>
-                            <option value="kegalle">Kegalle</option>
-                            <option value="kilinochchi">Kilinochchi</option>
-                            <option value="kurunegala">Kurunegala</option>
-                            <option value="mannar">Mannar</option>
-                            <option value="matale">Matale</option>
-                            <option value="matara">Matara</option>
-                            <option value="moneragala">Moneragala</option>
-                            <option value="mullaitive">Mullaitivu</option>
-                            <option value="nuwaraeliya">Nuwara Eliya</option>
-                            <option value="polonnaruwa">Polonnaruwa</option>
-                            <option value="puttalam">Puttalam</option>
-                            <option value="ratnapura">Ratnapura</option>
-                            <option value="trincomalee">Trincomalee</option>
-                            <option value="vavuniya">Vavuniya</option>
-
-                        </select>
-                    </td>
+                            </select>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td><input type="text" id="addressDonor" name="addressDonor"></td>
+                    </tr>
+                    <tr>
+                        <td>Blood Group:</td>
+                        <td><input type="text" id="bloodgroup" name="bloodgroup"></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" id="donor_reg_password" name="donor_reg_password"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="text" id="donoremail" name="donoremail"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="directDonorCheck" name="directDonorCheck" value="DirectDonor"><label for="directDonor"> I like to be a direct donor</label></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> <input type="submit" name= "save" value="Register"></td>
+                    </tr>
                     
-                </tr>
-                <tr>
-                    <td>Address:</td>
-                    <td><input type="text" id="addressDonor" name="addressDonor"></td>
-                </tr>
-                <tr>
-                    <td>Blood Group:</td>
-                    <td><input type="text" id="bloodgroup" name="bloodgroup"></td>
-                </tr>
-                <tr>
-                    <td>Password:</td>
-                    <td><input type="password" id="donor_reg_password" name="donor_reg_password"></td>
-                </tr>
-                <tr>
-                    <td>Email:</td>
-                    <td><input type="text" id="donoremail" name="donoremail"></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" id="directDonorCheck" name="directDonorCheck" value="DirectDonor"><label for="directDonor"> I like to be a direct donor</label></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td> <input type="submit" name= "save" value="Register"></td>
-                </tr>
-                
-            </table> 
-        </form>
-        <p>Already registered? <a href="donor.html">Login</a></p>
+                </table> 
+            </form>
+            <p>Already registered? <a href="donor.html">Login</a></p>
+        </div>
+
+          
     </div>
+    
 </body>
 </html>
 

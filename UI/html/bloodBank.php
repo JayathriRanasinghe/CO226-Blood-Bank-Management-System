@@ -5,35 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/bloodBankDesign.css">
+    <link rel="stylesheet" href="../css/design.css">
 </head>
 <body>
-    <h1>Blood Bank Management System</h1>
-    <h2>Your valuable donation saves 3 lives</h2>
-
-    <div class="topNavigationBar">
-        <a class="active" href="index.html">HOME</a>
     
-        <div class="dropdown">
-            
-            <button class="dropbtn">LOOKING FOR BLOOD 
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-    
-              <a href="../phpFiles/bloodAvailability.php">Check Blood Availability</a>
-              <a href="hospitalReq.html">Request Blood</a>
-              
-            </div>
-    
-        </div>
-    
-    
-         <!--<a href="../phpFiles/bloodAvailability.php">LOOKING FOR BLOOD</a> -->
-        <a href="donor.html">WANT TO DONATE</a>
-        <a href="aboutus.html">ABOUT US</a>
-    </div>
-    <?php
+    <div class="imageContainer" id="imageContainer">
+      <div class="topNavigationBar">
+        <img>
+        <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="lookingForBlood.html">Looking for blood</a></li>
+          <li><a href="donor.html">Want to donate</a></li>
+          <li><a href="aboutus.html">About us</a></li>
+        </ul>
+      </div>
+        <div class="content">
+        <?php
     session_start();
      $hostname = "localhost";
      $username = "root";
@@ -68,18 +55,22 @@
 ?>
     <div class="ycontainer">
         <a href = "../phpFiles/onlineDonorRequests.php">
-            <button class = "btn btn1" >Donor bookings</button>
+            <button type="button"><span></span> Donor bookings</button>
         </a>
         <a href = "organizationRequest.php">
-            <button class = "btn btn1">Organization requests</button>
+            <button type="button"><span></span> Organization requests</button>
         </a>
         <a href = "bloodStockAvilable.php">
-            <button class = "btn btn1">Blood availability</button>
+            <button type="button"><span></span> Blood availability</button>
         </a>
         <a href = "hospitalRequest.html">
-            <button class = "btn btn1">Hospital requests</button> 
+            <button type="button"><span></span> Hospital requests</button> 
         </a>
     </div>
+        </div>
+
+    </div>
+    
 
 
 
