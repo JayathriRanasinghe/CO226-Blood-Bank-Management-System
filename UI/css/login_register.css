@@ -64,6 +64,13 @@ h1 {
     border-radius: 30px;
 }
 
+.main h2{
+    color: #fff;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    margin-left: 150px;
+}
+
 .username{
     position:relative;
     left: 80px;
@@ -129,6 +136,15 @@ h1 {
     position: relative;
     margin-left: 10px;
     font-size: 20px;
+    color: #f9f9f9;
+}
+
+.fixedlabel{
+    width: 105px;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    font-size: 16px;
     color: #f9f9f9;
 }
 

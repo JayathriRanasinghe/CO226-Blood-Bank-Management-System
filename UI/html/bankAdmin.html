@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/design.css">
+    <link rel="stylesheet" href="../css/login_register.css">
 </head>
 <body>
     <div class="imageContainer" id="imageContainer">
@@ -20,24 +20,24 @@
           </ul>
         </div>
 
-        <div class="content">
-            <h1>Login</h1>
+        <div class="main">
+            <h2>Login</h2>
             <form class = "form" method="POST" action="bloodBank.php">
-                <table>
-                    <tr>
-                        <td>Admin name:</td>
-                        <td><input type="text" id="AdminName" name="AdminName"><br></td>
-                        </tr>
-                    <tr>
-                    <td>Blood bank ID:</td>
-                    <td><input type="password" id="BloodBankID" name="BloodBankID"><br></td>
-                    </tr>
-    
-                    <tr>
-                        <td></td>
-                        <td> <input type="submit" name="login" value="Login"></td>
-                    </tr>
-                </table> 
+
+                <div class="div1">
+                    <label class="fixedlabel">Admin name:</label>
+                    <input class="password" type="text" id="AdminName" name="AdminName">
+                    
+                </div>
+                <div class="div1">
+                    <label class="fixedlabel">Blood bank ID:</label>
+                    <input class="password" type="password" id="BloodBankID" name="BloodBankID">      
+                
+                </div>
+                    
+                <input class="loginbutton" type="submit" name="login" value="Login">
+                 
+
             </form>
             
         </div>
