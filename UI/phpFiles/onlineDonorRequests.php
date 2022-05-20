@@ -9,7 +9,7 @@
     $connect = mysqli_connect($hostname, $username, $password, $databaseName);
 
     // only if the button is clicked
-    echo $_SESSION['bb_id'];
+    
         // select the name of the bb not the id
         $query = "SELECT DISTINCT donor_prerequisites.*, donor_account.donor_fname, donor_account.donor_lname 
         FROM donor_prerequisites,donor_account,blood_bank 
