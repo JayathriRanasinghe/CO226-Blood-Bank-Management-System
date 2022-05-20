@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="../css/design.css">
+    <link rel="stylesheet" href="../css/login_register.css">
 </head>
 <body>
     
@@ -21,90 +21,85 @@
         </div>
 
         <div class="content">
-            <h3>Register</h3>
+            <div class="main2">
             <form class="form" method="post" action="../phpFiles/register_form.php">
-                <table>
-                    <tr>
-                        <td>First name:</td>
-                        <td><input type="text" id="donorFirstname" name="donorFirstname"><br></td>
-                        <td>Last name:</td>
-                        <td><input type="text" id="donorLastname" name="donorLastname"><br></td>
-                    </tr>
-                    <tr>
-                        <td>NIC:</td>
-                        <td><input type="text" id="nic" name="nic"><br></td>
-                    </tr>
-                    <tr>
-                        <td>Gender:</td>
-                        <td><input type="radio" id="gender_male" name="gender" value="male"> <label for="male">Male</label><br>
-                            <input type="radio" id="gender_female" name="gender" value="female"> <label for="female">Female</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Birthday:</td>
-                        <td><input type="date" id="donor_bday" name="donor_bday"><br></td>
-                    </tr>
-                    <tr>
-                        <td><label for="district">District:</label></td>
-                        <td>
-                            <select id="district" name="district">
-                                <option value="ampara">Ampara</option>
-                                <option value="anuradhapura">Anuradhapura</option>
-                                <option value="badulla">Badulla</option>
-                                <option value="batticaloa">Batticaloa</option>
-                                <option value="colombo">Colombo</option>
-                                <option value="galle">Galle</option>
-                                <option value="gampaha">Gampaha</option>
-                                <option value="hambanthota">Hambanthota</option>
-                                <option value="jaffna">Jaffna</option>
-                                <option value="kalutara">Kalutara</option>
-                                <option value="kandy">Kandy</option>
-                                <option value="kegalle">Kegalle</option>
-                                <option value="kilinochchi">Kilinochchi</option>
-                                <option value="kurunegala">Kurunegala</option>
-                                <option value="mannar">Mannar</option>
-                                <option value="matale">Matale</option>
-                                <option value="matara">Matara</option>
-                                <option value="moneragala">Moneragala</option>
-                                <option value="mullaitive">Mullaitivu</option>
-                                <option value="nuwaraeliya">Nuwara Eliya</option>
-                                <option value="polonnaruwa">Polonnaruwa</option>
-                                <option value="puttalam">Puttalam</option>
-                                <option value="ratnapura">Ratnapura</option>
-                                <option value="trincomalee">Trincomalee</option>
-                                <option value="vavuniya">Vavuniya</option>
-    
-                            </select>
-                        </td>
+                    <div class="div1">
+                        <label>First name: </label>
+                        <input class="username" type="text" id="donorFirstname" name="donorFirstname">
+                        <label class="username">Last name: </label>
+                        <input class="username" type="text" id="donorLastname" name="donorLastname">
+                    </div>
+                    <div class="div1">
+                        <label>NIC: </label>
+                        <input class="username" type="text" id="nic" name="nic">
+                    </div>    
+                    <div class="div1">
+                        <label>Gender: </label>
+                        <input class = "username" type="radio" id="gender_male" name="gender" value="male"> <label class="malelabel" for="male">Male</label>
+                        <input class = "radiobtn" type="radio" id="gender_female" name="gender" value="female"> <label class="femalelabel" for="female">Female</label>
                         
-                    </tr>
-                    <tr>
-                        <td>Address:</td>
-                        <td><input type="text" id="addressDonor" name="addressDonor"></td>
-                    </tr>
-                    <tr>
-                        <td>Blood Group:</td>
-                        <td><input type="text" id="bloodgroup" name="bloodgroup"></td>
-                    </tr>
-                    <tr>
-                        <td>Password:</td>
-                        <td><input type="password" id="donor_reg_password" name="donor_reg_password"></td>
-                    </tr>
-                    <tr>
-                        <td>Email:</td>
-                        <td><input type="text" id="donoremail" name="donoremail"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" id="directDonorCheck" name="directDonorCheck" value="DirectDonor"><label for="directDonor"> I like to be a direct donor</label></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td> <input type="submit" name= "save" value="Register"></td>
-                    </tr>
+                    </div>
+
+                    <div class="div1">
+                        <label>Birthday: </label>
+                        <input class = "dateinput" type="date" id="donor_bday" name="donor_bday">
+                    </div>
+                    <div class="div1">
+                        <label for="district">District:</label>
+                        <select class="district" id="district" name="district">
+                            <option value="ampara">Ampara</option>
+                            <option value="anuradhapura">Anuradhapura</option>
+                            <option value="badulla">Badulla</option>
+                            <option value="batticaloa">Batticaloa</option>
+                            <option value="colombo">Colombo</option>
+                            <option value="galle">Galle</option>
+                            <option value="gampaha">Gampaha</option>
+                            <option value="hambanthota">Hambanthota</option>
+                            <option value="jaffna">Jaffna</option>
+                            <option value="kalutara">Kalutara</option>
+                            <option value="kandy">Kandy</option>
+                            <option value="kegalle">Kegalle</option>
+                            <option value="kilinochchi">Kilinochchi</option>
+                            <option value="kurunegala">Kurunegala</option>
+                            <option value="mannar">Mannar</option>
+                            <option value="matale">Matale</option>
+                            <option value="matara">Matara</option>
+                            <option value="moneragala">Moneragala</option>
+                            <option value="mullaitive">Mullaitivu</option>
+                            <option value="nuwaraeliya">Nuwara Eliya</option>
+                            <option value="polonnaruwa">Polonnaruwa</option>
+                            <option value="puttalam">Puttalam</option>
+                            <option value="ratnapura">Ratnapura</option>
+                            <option value="trincomalee">Trincomalee</option>
+                            <option value="vavuniya">Vavuniya</option>
+
+                        </select>
+                    </div>
                     
-                </table> 
+                    <div class="div1">
+                        <label>Address: </label>
+                        <input class="username" type="text" id="addressDonor" name="addressDonor">
+                    </div>
+                    <div class="div1">
+                        <label>Blood Group: </label>
+                        <input class="username" type="text" id="bloodgroup" name="bloodgroup">
+                    </div>
+                    <div class="div1">
+                        <label>Password: </label>
+                        <input class="username" type="password" id="donor_reg_password" name="donor_reg_password">
+                        <label class="username">Email: </label>
+                        <input class="username" type="text" id="donoremail" name="donoremail">
+                    </div>
+                    <div class="div1">
+                        <input class="check" type="checkbox" id="directDonorCheck" name="directDonorCheck" value="DirectDonor"><label class="check2" for="directDonor"> I like to be a direct donor</label>
+                    </div>
+                    <div>
+                        <input class="loginbutton2" type="submit" name= "save" value="Register">
+                    </div>
+                    <p>Already registered? <a href="donor.html">Login</a></p>
             </form>
-            <p>Already registered? <a href="donor.html">Login</a></p>
+            </div>
+            
         </div>
 
           

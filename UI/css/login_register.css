@@ -67,11 +67,34 @@ h1 {
 .username{
     position:relative;
     left: 80px;
-    line-height: 40px;
+    line-height: 35px;
     border-radius: 20px;
     padding: 0 22px;
     font-size: 16px;
-    color: #555;
+    color: #fff;
+    cursor: pointer;
+}
+
+.radiobtn{
+    position:relative;
+    left: 60px;
+    line-height: 35px;
+    border-radius: 20px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.dateinput{
+    position:relative;
+    left: 80px;
+    line-height: 35px;
+    border-radius: 20px;
+    width: 170px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: rgb(167, 157, 157);
     cursor: pointer;
 }
 
@@ -86,10 +109,19 @@ h1 {
     cursor: pointer;
 }
 
+.lastname{
+    position: relative;
+    margin-left: 100px;
+    font-size: 16px;
+    color: #f9f9f9;
+}
+
+
+
 .label1{
     position: relative;
     margin-left: 10px;
-    font-size: 20px;
+    font-size: 16px;
     color: #f9f9f9;
 }
 
@@ -126,9 +158,39 @@ h1 {
     background: #850b0b;
 }
 
-.div1{
+.loginbutton2{
+    position: relative;
+    width: 355px;
+    height: 50px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 0 10px;
+    margin-top: 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 3px solid #8f0d0d;
+    background: rgba(0,0,0,0.20);
+    cursor: pointer;
+    color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.loginbutton2:hover{
+    border: 5px solid rgba(238, 140, 140, 0.2);
+    background: #850b0b;
+}
+
+.div_first{
     position: relative;
     margin-top: 30px;
+}
+
+.div1{
+    position: relative;
+    margin-top: 20px;
 }
 
 .div2{
@@ -142,4 +204,91 @@ h1 {
     font-style: italic;
     color: #fff;
     margin-top: 20px;
+}
+
+
+.district{
+    position:relative;
+    left: 80px;
+    line-height: 50px;
+    border-radius: 10px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+    width: 215px;
+}
+
+
+.main2{
+    background-color: rgba(238, 140, 140, 0.2);
+    width: 1000px;
+    height: 597px;
+    margin-left: 310px;
+    margin-top: 30px;
+    align-items: center;
+    padding: 20px 20px;
+    border-radius: 30px;
+}
+
+.main2 p{
+    position: relative;
+    left: 10px;
+    font-size: large;
+    font-style: italic;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.content h3{
+    color: #fff;
+}
+
+label{
+    width: 100px;
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #f9f9f9;
+}
+
+.malelabel{
+    width: 100px;
+    display: inline-block;
+    position: relative;
+    left: 80px;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #f9f9f9;
+}
+
+.femalelabel{
+    width: 100px;
+    display: inline-block;
+    position: relative;
+    left: 60px;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #f9f9f9;
+}
+
+.check{
+    width: 100px;
+    display: inline-block;
+    position: relative;
+    left: 10px;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #f9f9f9;
+}
+
+.check2{
+    width: 200px;
+    display: inline-block;
+    position: relative;
+    left: 10px;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #f9f9f9;
 }
