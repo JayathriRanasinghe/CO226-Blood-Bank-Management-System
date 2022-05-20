@@ -9,11 +9,11 @@
     $connect = mysqli_connect($hostname, $username, $password, $databaseName);
 
     // only if the button is clicked
-    
+    echo $_SESSION['bb_id'];
         // select the name of the bb not the id
         $query = "SELECT DISTINCT donor_prerequisites.*, donor_account.donor_fname, donor_account.donor_lname 
         FROM donor_prerequisites,donor_account,blood_bank 
-        WHERE donor_prerequisites.donor_id = donor_account.donor_id AND request_status IS NULL 
+        WHERE donor_prerequisites.donor_id = donor_account.donor_id AND request_status = 2 
         AND donor_prerequisites.blood_bank_name =(SELECT blood_bank_name FROM blood_bank WHERE blood_bank_id = ".$_SESSION['bb_id'].")";
 
 
@@ -60,29 +60,19 @@
     <link rel="stylesheet" href="../css/design.css">
 </head>
 <body>
-    <h1>Blood Bank Management System</h1>
-    <h2>Your valuable donation saves 3 lives</h2>
-    <div class="topNavigationBar">
-        <a class="active" href="index.html">HOME</a>
-    
-        <div class="dropdown">
-            <button class="dropbtn">LOOKING FOR BLOOD 
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-    
-              <a href="../phpFiles/bloodAvailability.php">Check Blood Availability</a>
-              <a href="../html/hospitalReq.html">Request Blood</a>
-              
-            </div>
-        </div> 
-    
-        <a href="donor.html">WANT TO DONATE</a>
-        <a href="aboutus.html">ABOUT US</a>
-    </div>
+    <div class="imageContainer" id="imageContainer">
+      <div class="topNavigationBar">
+        <img>
+        <ul>
+          <li><a href="../html/main.html">Home</a></li>
+          <li><a href="../html/lookingForBlood.html">Looking for blood</a></li>
+          <li><a href="../html/donor.html">Want to donate</a></li>
+          <li><a href="../html/aboutus.html">About us</a></li>
+        </ul>
+      </div>
 
-    
-    <div class="parent">
+
+      <div class="content">
 
         <table class="table3">  
             <tr>
@@ -99,13 +89,16 @@
             </tr>
                
         </table>
-    
-        
 
     </div>
-    <div class = "reload_button_div">
+    <div class="content-sub">
         <!--this button will reload the page and it will remove the status updated rows-->
-        <a class="reload_button" href="onlineDonorRequests.php">RELOAD</a>
+        
+        <a href="onlineDonorRequests.php">
+            <button type="button"><span></span>RELOAD</button>
+        </a>
+        
+        
     </div>
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -154,6 +147,11 @@
             });
         }
     </script>   
+        
+    </div>
+
+    
+    
     
 </body>
 </html>
