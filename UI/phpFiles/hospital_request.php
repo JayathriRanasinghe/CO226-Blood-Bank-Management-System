@@ -45,34 +45,22 @@
     
     if ($result) {
         ?>
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Login</title>
-            <link rel="stylesheet" href="../css/design.css">
-        </head>
-        <body>
-            <h1>Blood Bank Management System</h1>
-            <h2>Your valuable donation saves 3 lives</h2>
-            <?php 
-                require("../phpFiles/navigatorBar.php");
-            ?>
-
-
-            <div class = "datasavingMessage">
-                <p>Your data has sent to the blood bank. The blood bank will contact you and confirm your request ASAP.<br>Thank you!</p>
-            </div>
-            
-        </body>
-        </html>
+            echo '
+            <script>window.alert("You request has been sent to the blood bank. You will be contacted soon.");
+            window.location.href='../html/main.html';
+            </script>'
 
         <?php 
     } else{
-        echo "Unsuccessfull Registration!";
-        echo "<p class='link'>Click here to <a href='donorRegister.html'>registration</a> again.</p>";
+        ?>
+
+            echo '
+            <script>window.alert("Error recording your request. Please Try Again.");
+            window.location.href='../html/main.html';
+            </script>'
+
+        <?php
+        
     }
     
     

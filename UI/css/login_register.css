@@ -11,6 +11,7 @@
     background-position: center;
 
 }
+
 h1 {
     color: rgb(255, 255, 255);
 }
@@ -55,13 +56,13 @@ h1 {
 
 .main{
     background-color: rgba(238, 140, 140, 0.2);
-    width: 380px;
+    width: 30%;
     height: 400px;
-    margin-left: 310px;
-    margin-top: 100px;
+    margin: auto;
     align-items: center;
     padding: 20px 20px;
     border-radius: 30px;
+    
 }
 
 .main h2{
@@ -80,6 +81,7 @@ h1 {
     font-size: 16px;
     color: rgb(54, 48, 48);
     cursor: pointer;
+    color: white;
     
 }
 
@@ -241,8 +243,7 @@ h1 {
     background-color: rgba(238, 140, 140, 0.2);
     width: 1000px;
     height: 597px;
-    margin-left: 310px;
-    margin-top: 30px;
+    margin: auto;
     align-items: center;
     padding: 20px 20px;
     border-radius: 30px;
