@@ -69,6 +69,7 @@
                 </div> 
 
                 <a href="donor.html">WANT TO DONATE</a>
+                <a href="donationCamp.php">DONATION CAMP</a>
                 <a href="aboutus.html">ABOUT US</a>
             </div>
 

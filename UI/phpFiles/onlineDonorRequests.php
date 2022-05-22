@@ -67,6 +67,7 @@
           <li><a href="../html/main.html">Home</a></li>
           <li><a href="../html/lookingForBlood.html">Looking for blood</a></li>
           <li><a href="../html/donor.html">Want to donate</a></li>
+          <li><a href="../html/donationCamp.php">Donation camp</a></li>
           <li><a href="../html/aboutus.html">About us</a></li>
         </ul>
       </div>

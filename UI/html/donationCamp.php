@@ -26,7 +26,7 @@
     </div>
 
         
-    <h2>Blood Request Form</h2><br>
+    <h2>Request For Donation Camp </h2><br>
         
         <form class="form" method="post" action="../phpFiles/hospital_request.php">
             
@@ -34,10 +34,10 @@
 
             <div class="divContent">
 
-                <h4>Hospital Details</h4><br>
+                
 
                 <div class="div1">
-                    <label> Hospital name:</label>
+                    <label> Organization name:</label>
                     <input class="username" type="text" id="Hospitalname" name="Hospitalname">
                 </div><br>
 
@@ -75,22 +75,14 @@
                     ?>
                 </div><br><br>
 
-                <h4>Recepient Detials</h4><br>
+                
 
                 <div class="div1">
-                    <label>Recepient NIC:</label>
+                    <label>Address</label>
                     <input class="username" type="text" id="recepientNic" name="recepientNic">
                 </div><br>
 
-                <div class="div1">
-                    <label>Blood Group:</label>
-                    <input class="username" type="text" id="bloodGroup" name="bloodGroup">
-                </div><br>
-
-                <div class="div1">
-                    <label>Amount of blood units:</label>
-                    <input class="username" type="text" id="amount" name="amount">
-                </div><br>
+                
 
                 <div class="div1">
                     <label>Comments:</label>
