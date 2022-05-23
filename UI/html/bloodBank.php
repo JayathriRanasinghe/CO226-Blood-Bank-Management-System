@@ -58,6 +58,9 @@
             <a href = "../phpFiles/onlineDonorRequests.php">
                 <button type="button"><span></span> Donor bookings</button>
             </a>
+            <a href = "#">
+                <button type="button"><span></span> Blood Stock</button>
+            </a>
             <a href = "organizationRequest.php">
                 <button type="button"><span></span> Organization requests</button>
             </a>

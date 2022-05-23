@@ -50,31 +50,19 @@
             <link rel="stylesheet" href="../css/profileStylesheet.css">
         </head>
         <body>
-            <h1>Blood Bank Management System</h1>
-            <h2>Your valuable donation saves 3 lives</h2>
-            
-            <div class="topNavigationBar">
-                <a class="active" href="index.html">HOME</a>
+            <div class="imageContainer" id="imageContainer">
+                <div class="topNavigationBar">
+                    <img>
+                    <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="lookingForBlood.html">Looking for blood</a></li>
+                    <li><a href="donor.html">Want to donate</a></li>
+                    <li><a href="donationCamp.php">Donation camp</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
+                    </ul>
+                </div>
 
-                <div class="dropdown">
-                    <button class="dropbtn">LOOKING FOR BLOOD 
-                    <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-
-                        <a href="../phpFiles/bloodAvailability.php">Check Blood Availability</a>
-                        <a href="../html/hospitalReq.html">Request Blood</a>
-          
-                    </div>
-                </div> 
-
-                <a href="donor.html">WANT TO DONATE</a>
-                <a href="donationCamp.php">DONATION CAMP</a>
-                <a href="aboutus.html">ABOUT US</a>
-            </div>
-
-
-            <!--HTML DISPLAY-->
+                <!--HTML DISPLAY-->
             <div class="display">
                 <?php
                     //next donations : comparing with the current_date() and current_time()
@@ -124,7 +112,9 @@
                     }
                     ?>
                 <!--Button: link to the donor_prereq.html to enter the data before booking the data-->    
-                <a class="booking" href="donor_prereq.html">Book a Date</a>
+                <a class="booking" href="donor_prereq.html">
+                    <button type="button"><span></span>Book a Date</button>
+                </a>
             </div>
 
             <!-- the donor profile card -->
@@ -134,6 +124,10 @@
                 <p class=""> <?php echo $row["district"] ?> </p> </p>
                 <p><?php echo "No of donations: " .$result2->num_rows; ?> </p>   
             </div> 
+                    
+            </div>
+
+            
 
         </body>
         </html>
