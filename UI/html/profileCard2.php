@@ -61,69 +61,71 @@
                     <li><a href="aboutus.html">About us</a></li>
                     </ul>
                 </div>
-
+                <div class="content">
                 <!--HTML DISPLAY-->
-            <div class="display">
-                <?php
-                    //next donations : comparing with the current_date() and current_time()
-                    $sql3 = "SELECT * FROM online_donation WHERE  online_donation.donor_id = $donor_id AND online_donation.date > CURRENT_DATE()
-                    OR (online_donation.date = CURRENT_DATE() AND online_donation.time >= CURRENT_TIME()) ORDER BY donation_id DESC";
-                    
-                    $result3 = $conn->query($sql3) or die($conn->error);
-                    
-                    if ($result3->num_rows > 0) { 
-                    // Show each data returned by mysql 
-        
-                        while($row3 = $result3->fetch_assoc()) { 
-                            $bb_id = $row3["donor_id"];
-                            $sql4 = "SELECT blood_bank_name FROM donor_prerequisites WHERE donor_prerequisites.donor_id = $bb_id";
-                            $result4 = $conn->query($sql4) or die($conn->error);
-                            $row4 = $result4->fetch_assoc()
-                ?>
+                <div class="display">
+                    <?php
+                        //next donations : comparing with the current_date() and current_time()
+                        $sql3 = "SELECT * FROM online_donation WHERE  online_donation.donor_id = $donor_id AND online_donation.date > CURRENT_DATE()
+                        OR (online_donation.date = CURRENT_DATE() AND online_donation.time >= CURRENT_TIME()) ORDER BY donation_id DESC";
+                        
+                        $result3 = $conn->query($sql3) or die($conn->error);
+                        
+                        if ($result3->num_rows > 0) { 
+                        // Show each data returned by mysql 
+            
+                            while($row3 = $result3->fetch_assoc()) { 
+                                $bb_id = $row3["donor_id"];
+                                $sql4 = "SELECT blood_bank_name FROM donor_prerequisites WHERE donor_prerequisites.donor_id = $bb_id";
+                                $result4 = $conn->query($sql4) or die($conn->error);
+                                $row4 = $result4->fetch_assoc()
+                    ?>
                     <!--Display the data in the HTML-->
-                    <h1>Next donation</h1>
-                    <div class="subTextDisplay">
-                        <p><?php echo "DATE : ".$row3["date"] ?></p>
-                        <p><?php echo "TIME : ".$row3["time"] ?></p>
-                        <p><?php echo "BLOODBANK : ".$row4["blood_bank_name"]?></p>
-                    </div>
+                                <h1>Next donation</h1>
+                                <div class="subTextDisplay">
+                                    <p><?php echo "DATE : ".$row3["date"] ?></p>
+                                    <p><?php echo "TIME : ".$row3["time"] ?></p>
+                                    <p><?php echo "BLOODBANK : ".$row4["blood_bank_name"]?></p>
+                                </div>
+
 
                     <?php
+                            }
                         }
-                    }
                     ?>
-                <?php
-                    //past donations and last donation is at the top
-                    $sql2 = "SELECT * FROM online_donation WHERE  online_donation.donor_id =$donor_id AND online_donation.date < CURRENT_DATE()
-                    OR (online_donation.date = CURRENT_DATE() AND online_donation.time <= CURRENT_TIME()) ORDER BY donation_id DESC";
-                    $result2 = $conn->query($sql2) or die($conn->error);
-                    if ($result2->num_rows > 0) { 
-                    // Show each data returned by mysql 
-        
-                    while($row2 = $result2->fetch_assoc()) { 
-                ?>
-                    <h2>[Last Donation]</h2>
-                    <div class="subTextDisplay">
-                        <p><?php echo $row2["date"] ." ".$row2["time"]?></p>
-                        <p>[Date | Send to {Blood bank}]</p>
-                    </div>
+                    <h2>Last Donations</h2>
                     <?php
-                        }
-                    }
+                        //past donations and last donation is at the top
+                        $sql2 = "SELECT * FROM online_donation WHERE  online_donation.donor_id =$donor_id AND online_donation.date < CURRENT_DATE()
+                        OR (online_donation.date = CURRENT_DATE() AND online_donation.time <= CURRENT_TIME()) ORDER BY donation_id DESC";
+                        $result2 = $conn->query($sql2) or die($conn->error);
+                        if ($result2->num_rows > 0) { 
+                        // Show each data returned by mysql 
+                        
+                            while($row2 = $result2->fetch_assoc()) { 
                     ?>
-                <!--Button: link to the donor_prereq.html to enter the data before booking the data-->    
-                <a class="booking" href="donor_prereq.html">
-                    <button type="button"><span></span>Book a Date</button>
-                </a>
-            </div>
+                    
+                            <div class="subTextDisplay">
+                                <p><?php echo $row2["date"] ." ".$row2["time"]?></p>
+                                
+                            </div>
+                    <?php
+                                }
+                            }
+                    ?>
+                    <!--Button: link to the donor_prereq.html to enter the data before booking the data-->    
+                    <a class="booking" href="donor_prereq.html">
+                        <button type="button"><span></span>Book a Date</button>
+                    </a>
+                </div>
 
-            <!-- the donor profile card -->
-            <div class="card">
-                <img src="../images/male_profilePic.png" alt="male_profile_pic" style="width:100%">
-                <h1> <?php echo $row["donor_fname"] . " " . $row["donor_lname"]; ?> </p> </h1>
-                <p class=""> <?php echo $row["district"] ?> </p> </p>
-                <p><?php echo "No of donations: " .$result2->num_rows; ?> </p>   
-            </div> 
+                <!-- the donor profile card -->
+                <div class="card">
+                    <img src="../images/profile_pic.jpg" alt="male_profile_pic" style="width:100%">
+                    <h1> <?php echo $row["donor_fname"] . " " . $row["donor_lname"]; ?> </p> </h1>
+                    <p class=""> <?php echo $row["district"] ?> </p> </p>
+                    <p><?php echo "No of donations: " .$result2->num_rows; ?> </p>   
+                </div> 
                     
             </div>
 
