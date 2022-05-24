@@ -21,9 +21,8 @@ h2 {
     color: white;
 }
 
-
 .topNavigationBar{
-    width:85%;
+    width: 85%;
     margin: auto;
     padding: 35px 0;
     display: flex;
@@ -63,7 +62,7 @@ h2 {
 .main{
     background-color: rgba(238, 140, 140, 0.2);
     width: 55%;
-    height: 580px;
+    height: 450px;
     margin: auto;
     align-items: center;
     padding: 20px 20px;
@@ -73,27 +72,22 @@ h2 {
 
 .main h2{
     color: #fff;
-    margin-top: 1000px;
+    margin-top: 60px;
     margin-bottom: 40px;
     margin-left: 150px;
 }
 
 .username{
     position:relative;
-    left: 20%;
+    left: 10%;
     line-height: 35px;
     border-radius: 20px;
     padding: 0 22px;
-    font-size: 16px;
+    font-size: 15px;
     color: rgb(54, 48, 48);
     cursor: pointer;
     
     
-}
-
-.divContent{
-    padding-left: 5%;
-    padding-top: 5%;       
 }
 
 .radiobtn{
@@ -119,8 +113,80 @@ h2 {
     cursor: pointer;
 }
 
+.password{
+    position:relative;
+    left: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+}
+
+.lastname{
+    position: relative;
+    margin-left: 100px;
+    font-size: 16px;
+    color: #f9f9f9;
+}
 
 
+
+label{
+    width: 200px;
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #f9f9f9;
+}
+
+
+.label2{
+    position: relative;
+    margin-left: 10px;
+    font-size: 20px;
+    color: #f9f9f9;
+}
+
+label3{
+    width: 200px;
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #f9f9f9;
+}
+.fixedlabel{
+    width: 105px;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #f9f9f9;
+}
+
+
+.loginbutton{
+    position: relative;
+    width: 355px;
+    height: 50px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 0 10px;
+    margin-top: 60px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 3px solid #8f0d0d;
+    background: rgba(0,0,0,0.20);
+    cursor: pointer;
+    color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+    font-size: 17px;
+    margin-left: 10px;
+}
 
 .loginbutton:hover{
     border: 5px solid rgba(238, 140, 140, 0.2);
@@ -164,7 +230,7 @@ h2 {
 
 .div2{
     position: relative;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .main p{

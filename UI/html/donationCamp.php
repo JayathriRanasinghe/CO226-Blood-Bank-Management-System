@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request Blood</title>
+    <title>Request for donation camp</title>
     <link rel="stylesheet" href="../css/donationCampForm.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,18 +37,18 @@
                 
 
                 <div class="div1">
-                    <label> Organization name:</label>
-                    <input class="username" type="text" id="Hospitalname" name="Hospitalname">
+                    <label3> Organization name:</label3>
+                    <input class="username" type="text" id="OrganizationName" name="OrganizationName">
                 </div><br>
 
                 <div class="div1">
-                    <label>Contact Number:</label>
+                    <label3>Contact Number:</label3>
                     <input class="username" type="text" id="contact" name="contact">
                 </div><br>
               
                 
                 <div class="div1">
-                    <label>Select the blood bank: </label>
+                    <label3>Select the blood bank: </label3>
                     
                     <?php
                         require('../phpFiles/database.php');
@@ -78,28 +78,23 @@
                 
 
                 <div class="div1">
-                    <label>Address</label>
-                    <input class="username" type="text" id="recepientNic" name="recepientNic">
+                    <label3>Address:</label3>
+                    <input class="username" type="text" id="Address" name="recepientNic">
                 </div><br>
-
-                
-
-                <div class="div1">
-                    <label>Comments:</label>
-                    <input class="username" type="text" id="comment" name="comment">
-                </div><br><br>
 
                 <div class="div2">
 
                         <input class="loginbutton2" type="submit" name= "save" value="Send Request">
 
                 </div><br>
+                
 
             </div> 
 
         </div><br>                    
 
         </form>
+         
     
     </div>
 
