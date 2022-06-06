@@ -39,7 +39,7 @@
     echo"<table border = '1'>";
     echo"<tr><td>Organization name</td><td>Contact number</td><td>Address</td></tr>";
 
-    while($row = mysqli_fetch_assoc($retriveResult)){
+    while($row = mysqli_fetch_array($retriveResult)){
         echo"<tr><td>{$row['organization_name']}</td><td>{$row['contact_number']}</td><td>{$row['address']}</td></tr>";
     }
     echo"</table>";
