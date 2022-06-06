@@ -54,33 +54,23 @@
     <link rel="stylesheet" href="../css/design.css">
 </head>
 <body>
-    <h1>Blood Bank Management System</h1>
-    <h2>Your valuable donation saves 3 lives</h2>
+<div class="imageContainer" id="imageContainer">
     <div class="topNavigationBar">
-        <a class="active" href="index.html">HOME</a>
-    
-        <div class="dropdown">
-            <button class="dropbtn">LOOKING FOR BLOOD 
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-    
-              <a href="../phpFiles/bloodAvailability.php">Check Blood Availability</a>
-              <a href="../html/hospitalReq.html">Request Blood</a>
-              
-            </div>
-        </div> 
-    
-        <a href="donor.html">WANT TO DONATE</a>
-        <a href="donationCamp.php">Donation camp</a>
-        <a href="aboutus.html">ABOUT US</a>
+        <img>
+        <ul>
+          <li><a href="../html/main.html">Home</a></li>
+          <li><a href="../html/lookingForBlood.html">Looking for blood</a></li>
+          <li><a href="../html/donor.html">Want to donate</a></li>
+          <li><a href="../html/donationCamp.php">Donation camp</a></li>
+          <li><a href="../html/aboutus.html">About us</a></li>
+        </ul>
     </div>
     
 
     
-    <div class="parent">
+    <div class="content">
 
-        <table class="table3">  
+        <table class="table4">  
             <tr>
                 <th class="th2">Contact Number</th>
                 <th class="th2">Hospital</th>
@@ -96,6 +86,17 @@
         </table>
 
     </div>
+
+    <div class="content-sub">
+        <!--this button will reload the page and it will remove the status updated rows-->
+        
+        <a href="onlineHospitalRequests.php">
+            <button type="button"><span></span>RELOAD</button>
+        </a>
+        
+        
+    </div>
+    
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
@@ -110,7 +111,7 @@
             var id = parseInt(clicked.slice(3));
             
             $.ajax({
-            url:"acceptRequest.php", //the page containing php script
+            url:"", //the page containing php script
             type: "POST", //request type
             data: {"id":id},
             success:function(result){
@@ -130,7 +131,7 @@
             
             //using ajax to pass to the test.php (for updating the database request status)
             $.ajax({
-            url:"rejectRequest.php", //the page containing php script
+            url:"", //the page containing php script
             type: "POST", //request type
             data: {"id":id},
             success:function(result){
@@ -139,6 +140,7 @@
             });
         }
     </script>   
+</div>
     
 </body>
 </html>

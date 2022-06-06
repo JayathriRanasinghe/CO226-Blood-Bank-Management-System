@@ -20,10 +20,6 @@ h1 {
     background-color: rgb(192, 33, 33);
     color: black;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 764cd4aedce9e9646dc345bd3cb2f6014617a7e7
 .selectUserType h3{
     color: black;
     margin-top: 10%;
@@ -82,15 +78,11 @@ h1 {
   }
 
 
-<<<<<<< HEAD
   /* for the drop down mwnu in the navigation bar */
   .dropdown {
     float: left;
     overflow: hidden;
 }
-=======
-  
->>>>>>> 764cd4aedce9e9646dc345bd3cb2f6014617a7e7
   
 .dropdown .dropbtn{
     font-size: 16px;  
@@ -149,7 +141,6 @@ h1 {
     /*margin-bottom: 10%;
     */
   }
-<<<<<<< HEAD
   
   /* Links on mouse-over */
   .reload_button_div a:hover:not(.active) {
@@ -157,50 +148,6 @@ h1 {
     color: white;
   }
   
-=======
-
- /* for the drop down mwnu in the navigation bar */
- .dropdown {
-    float: left;
-    overflow: hidden;
-}
-.dropdown .dropbtn{
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-    top: 60vh;
-    background-color: rgb(216, 105, 105);
-}
-
-.dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-.dropdown-content a{
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-}
-.dropdown-content a:hover{
-    background-color: rgb(216, 105, 105);
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
->>>>>>> 764cd4aedce9e9646dc345bd3cb2f6014617a7e7
 .ycontainer{
     text-align: center;
     margin-top: 200px;

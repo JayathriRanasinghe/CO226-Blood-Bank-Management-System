@@ -64,10 +64,10 @@
             <a href = "organizationRequest.php">
                 <button type="button"><span></span> Organization requests</button>
             </a>
-            <a href = "bloodStockAvilable.php">
+            <a href = "../phpFiles/bloodAvailability.php">
                 <button type="button"><span></span> Blood availability</button>
             </a>
-            <a href = "hospitalRequest.html">
+            <a href = "../phpFiles/onlineHospitalRequests.php">
                 <button type="button"><span></span> Hospital requests</button> 
             </a>
         </div>
